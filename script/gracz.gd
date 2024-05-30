@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var hand = $hand
 
 
 const SPEED = 300.0
@@ -39,4 +40,6 @@ func _process(delta):
 
 	move_and_slide()
 	
+	hand.position = Vector2(1,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
+	hand.rotation = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
 

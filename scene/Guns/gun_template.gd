@@ -35,9 +35,10 @@ func shoot():
 	var projectile = projectileScene.instantiate()
 	var projectiles = get_tree().get_first_node_in_group("projectiles")
 	#var projectiles = get_tree().root
+	var player = get_tree().get_first_node_in_group("player")
 	
-	projectile.position = gunPos.global_position + Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
-	projectile.rotation = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
+	projectile.position = player.position - Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)) + Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
+	projectile.rotation = atan2(get_global_mouse_position().y-player.position.y,get_global_mouse_position().x-player.position.x)
 	
 	projectiles.add_child(projectile)
 	
