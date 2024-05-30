@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmmt8x7gpus51"]
+
+[ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
+[ext_resource type="PackedScene" uid="uid://d0evp2gvvy8bt" path="res://scene/Enemies/enemy_1.tscn" id="2_mpa76"]
+
+[node name="ScenaMarcela" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_xfj1p")]
+position = Vector2(214, 3)
+
+[node name="Enemy1" parent="." instance=ExtResource("2_mpa76")]

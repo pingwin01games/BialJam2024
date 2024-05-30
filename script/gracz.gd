@@ -31,9 +31,13 @@ func _process(delta):
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
 	if direction:
-		velocity.x = direction.x * SPEED 
+		velocity.x = direction.x 
 		
-		velocity.y = direction.y * SPEED 
+		velocity.y = direction.y 
+		
+		velocity = velocity.normalized()
+		
+		velocity *=SPEED
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED * 0.05)
