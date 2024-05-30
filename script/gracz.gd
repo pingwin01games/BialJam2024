@@ -5,12 +5,10 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
-var canshoot = true
+var canShoot = true
 
 var direction : Vector2
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _process(delta):
@@ -28,7 +26,7 @@ func _process(delta):
 
 	
 	
-	if Input.is_action_just_pressed("shoot") and canshoot:
+	if Input.is_action_just_pressed("shoot") and canShoot:
 	
 		rof.start()
 		var bul = pocisk.instantiate()
@@ -37,7 +35,7 @@ func _process(delta):
 		bul.rotation = atanek2
 		get_tree().root.add_child(bul)
 		
-		canshoot = false
+		canShoot = false
 		
 	
 	move_and_slide()
