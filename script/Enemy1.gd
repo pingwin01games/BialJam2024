@@ -62,5 +62,9 @@ func suck():
 	print_debug("SUCKIING")
 	var player = get_tree().get_first_node_in_group("player")
 	
-	player.position.x = move_toward(player.position.x, position.x, 300* 0.002)
-	player.position.y = move_toward(player.position.y, position.y, 300 * 0.002)
+	var playerVelocity = Vector2((move_toward(player.position.x, position.x, 300* 0.002)),move_toward(player.position.y, position.y, 300 * 0.002))
+	
+	playerVelocity.normalized()
+	
+	player.velocity -= playerVelocity*0.1
+	
