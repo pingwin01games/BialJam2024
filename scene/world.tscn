@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy2o3bvhfjw5g"]
+
+[ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_8i10d"]
+[ext_resource type="PackedScene" uid="uid://c2buksrl1610e" path="res://scene/blok.tscn" id="2_yiyiv"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8i10d")]
+
+[node name="Blok" parent="." instance=ExtResource("2_yiyiv")]
+position = Vector2(451, 217)
+
+[node name="Blok2" parent="." instance=ExtResource("2_yiyiv")]
+position = Vector2(538, -204)
+
+[node name="Blok3" parent="." instance=ExtResource("2_yiyiv")]
+position = Vector2(-411, -244)
+
+[node name="Blok4" parent="." instance=ExtResource("2_yiyiv")]
+position = Vector2(-267, 385)

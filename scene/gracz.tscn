@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://don334ykj1ehi"]
+
+[ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="1_ccwwm"]
+[ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D" groups=["wyjatkowy"]]
+script = ExtResource("1_d3427")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ci8wv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+texture = ExtResource("1_ccwwm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="bron" type="RayCast2D" parent="."]
+collision_mask = 2
