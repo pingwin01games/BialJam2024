@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://script/enemy_2.gd" id="1_l513w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y31qs"]
-size = Vector2(128, 128)
+size = Vector2(21, 29)
 
 [node name="enemy2" type="CharacterBody2D"]
 collision_layer = 4

@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cd21nheqyf6nm" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
-size = Vector2(128, 128)
+size = Vector2(41, 73)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bqahn"]
 animations = [{
@@ -43,6 +43,7 @@ animations = [{
 script = ExtResource("1_d3427")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 19.5)
 shape = SubResource("RectangleShape2D_ci8wv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -56,6 +57,7 @@ wait_time = 0.5
 [node name="Bonus_Reload" type="Timer" parent="."]
 
 [node name="hand" type="Node2D" parent="."]
+position = Vector2(20, 0)
 script = ExtResource("3_s1mo5")
 
 [node name="Gun_Template" parent="hand" instance=ExtResource("4_082ke")]
