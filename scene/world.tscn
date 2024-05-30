@@ -25,3 +25,5 @@ position = Vector2(474, 23)
 
 [node name="enemy2" parent="." instance=ExtResource("3_m2b3q")]
 position = Vector2(339, -518)
+
+[node name="Spawn_Pociskow" type="Node2D" parent="." groups=["projectiles"]]
