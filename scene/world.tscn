@@ -18,3 +18,6 @@ position = Vector2(-411, -244)
 
 [node name="Blok4" parent="." instance=ExtResource("2_yiyiv")]
 position = Vector2(-267, 385)
+
+[node name="Blok5" parent="." instance=ExtResource("2_yiyiv")]
+position = Vector2(474, 23)

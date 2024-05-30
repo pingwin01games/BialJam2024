@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
 @onready var bron = $bron
+@onready var rof = $RoF
 
 
 const SPEED = 300.0
 
+var canshoot = true
 
 var direction : Vector2
 
@@ -27,10 +29,18 @@ func _process(delta):
 
 	bron.target_position = get_global_mouse_position() - position
 	
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and canshoot:
 		if bron.is_colliding():
+			rof.start()
 			var cell = bron.get_collider()
 			cell.queue_free()
+			canshoot = false
 			
 	
 	move_and_slide()
+
+
+func _on_ro_f_timeout():
+	canshoot = true
+	rof.stop()
+	print("bam")

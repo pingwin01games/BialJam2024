@@ -21,3 +21,10 @@ position_smoothing_enabled = true
 
 [node name="bron" type="RayCast2D" parent="."]
 collision_mask = 2
+
+[node name="RoF" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="hand" type="Node2D" parent="."]
+
+[connection signal="timeout" from="RoF" to="." method="_on_ro_f_timeout"]
