@@ -42,6 +42,6 @@ func _process(delta):
 
 
 func _on_ro_f_timeout():
-	canshoot = true
+	canShoot = true
 	rof.stop()
 	print("bam")
