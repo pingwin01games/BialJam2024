@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
-@onready var bron = $bron
 @onready var rof = $RoF
-
+@onready var pocisk = preload("res://scene/pila.tscn")
 
 const SPEED = 300.0
 
@@ -27,15 +26,19 @@ func _process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED * 0.05)
 		velocity.y = move_toward(velocity.y, 0, SPEED * 0.05)
 
-	bron.target_position = get_global_mouse_position() - position
+	
 	
 	if Input.is_action_just_pressed("shoot") and canshoot:
-		if bron.is_colliding():
-			rof.start()
-			var cell = bron.get_collider()
-			cell.queue_free()
-			canshoot = false
-			
+	
+		rof.start()
+		var bul = pocisk.instantiate()
+		var atanek2 = atan2(get_global_mouse_position().y-position.y, get_global_mouse_position().x-position.x)
+		bul.position = position + Vector2(300,0).rotated(atanek2)
+		bul.rotation = atanek2
+		get_tree().root.add_child(bul)
+		
+		canshoot = false
+		
 	
 	move_and_slide()
 

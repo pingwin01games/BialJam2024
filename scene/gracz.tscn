@@ -19,9 +19,6 @@ texture = ExtResource("1_ccwwm")
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 
-[node name="bron" type="RayCast2D" parent="."]
-collision_mask = 2
-
 [node name="RoF" type="Timer" parent="."]
 wait_time = 0.5
 

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4pt4jdbqiin"]
+
+[ext_resource type="Script" path="res://script/pila.gd" id="1_u25rv"]
+[ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="1_w4go6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkv4f"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mp0yi"]
+radius = 128.0
+
+[node name="Pila" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_u25rv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w4go6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jkv4f")
+
+[node name="Area_Of_Damage" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Of_Damage"]
+shape = SubResource("CircleShape2D_mp0yi")
+
+[connection signal="body_entered" from="Area_Of_Damage" to="." method="_on_area_of_damage_body_entered"]
