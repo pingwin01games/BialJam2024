@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var rof = $RoF
-@onready var pocisk = preload("res://scene/pila.tscn")
+@onready var pocisk = preload("res://scene/pilaOdbija.tscn")
 @onready var reload = $Reload_Time
 @onready var ammo_count = $CanvasLayer/UI/Ammo_Count
 @onready var reload_bar = $CanvasLayer/UI/Reload_bar

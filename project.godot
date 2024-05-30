@@ -77,6 +77,10 @@ reload={
 2d_physics/layer_5="pocisk przeciwnika "
 2d_physics/layer_6="pick up"
 
+[physics]
+
+2d/default_gravity_vector=Vector2(0, 0)
+
 [rendering]
 
 renderer/rendering_method="mobile"
