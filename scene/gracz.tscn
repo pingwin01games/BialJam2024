@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
 size = Vector2(128, 128)
 
-[node name="Player" type="CharacterBody2D" groups=["wyjatkowy"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_d3427")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,6 +22,40 @@ position_smoothing_enabled = true
 [node name="RoF" type="Timer" parent="."]
 wait_time = 0.5
 
+[node name="Reload_Time" type="Timer" parent="."]
+
+[node name="Bonus_Reload" type="Timer" parent="."]
+
 [node name="hand" type="Node2D" parent="."]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="Ammo_Count" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.036
+anchor_right = 1.03993
+offset_left = -39.736
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "TEST"
+metadata/_edit_use_anchors_ = true
+
+[node name="Reload_bar" type="ProgressBar" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 0
+offset_left = 522.0
+offset_top = 478.0
+offset_right = 637.0
+offset_bottom = 505.0
+show_percentage = false
+
 [connection signal="timeout" from="RoF" to="." method="_on_ro_f_timeout"]
+[connection signal="timeout" from="Reload_Time" to="." method="_on_reload_time_timeout"]
+[connection signal="timeout" from="Bonus_Reload" to="." method="_on_bonus_reload_timeout"]
