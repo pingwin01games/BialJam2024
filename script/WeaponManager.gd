@@ -7,6 +7,7 @@ extends Node2D
 @onready var rof = $RoF
 
 var currentAmmo = 0
+var canShoot = true
 var reloading = false
 var startBonusReload = 0.3
 var starBonusReloadTime = 0.3
@@ -59,3 +60,24 @@ func _process(delta):
 			reload_bar.modulate = Color(1,0,0)
 			failBonusReloading = true
 
+func _on_ro_f_timeout():
+	canShoot = true
+	rof.stop()
+
+
+
+func _on_reload_time_timeout():
+	reloading = false
+	reload_bar.visible = false
+	reload.stop()
+	bonusReloading = false
+	failBonusReloading = false
+	print("koniec reload")
+	reload_bar.modulate = Color(1,1,1)
+	
+
+func _on_bonus_reload_timeout():
+	reload_bar.modulate = Color(1,1,1)
+	bonus_reload.stop()
+	print("brak bonusu")
+	print(reload.time_left)

@@ -17,8 +17,8 @@ var starBonusReloadTime = 0.3
 var direction : Vector2
 
 func _ready():
-	currentAmmo = MAXAMMO
-	reload_bar.max_value = reload.wait_time
+	pass
+
 
 func _process(delta):
 	
@@ -39,28 +39,4 @@ func _process(delta):
 
 	move_and_slide()
 	
-	
 
-
-func _on_ro_f_timeout():
-	canShoot = true
-	rof.stop()
-
-
-
-func _on_reload_time_timeout():
-	reloading = false
-	reload_bar.visible = false
-	reload.stop()
-	bonusReloading = false
-	failBonusReloading = false
-	print("koniec reload")
-	reload_bar.modulate = Color(1,1,1)
-	
-
-func _on_bonus_reload_timeout():
-	reload_bar.modulate = Color(1,1,1)
-	bonus_reload.stop()
-	print("brak bonusu")
-	print(reload.time_left)
-	

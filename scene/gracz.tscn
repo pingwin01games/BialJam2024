@@ -58,6 +58,6 @@ offset_right = 637.0
 offset_bottom = 505.0
 show_percentage = false
 
-[connection signal="timeout" from="RoF" to="." method="_on_ro_f_timeout"]
-[connection signal="timeout" from="Reload_Time" to="." method="_on_reload_time_timeout"]
-[connection signal="timeout" from="Bonus_Reload" to="." method="_on_bonus_reload_timeout"]
+[connection signal="timeout" from="RoF" to="hand" method="_on_ro_f_timeout"]
+[connection signal="timeout" from="Reload_Time" to="hand" method="_on_reload_time_timeout"]
+[connection signal="timeout" from="Bonus_Reload" to="hand" method="_on_bonus_reload_timeout"]
