@@ -31,10 +31,11 @@ func reload():
 
 func shoot():
 	var projectile = projectileScene.instantiate()
-	var projectiles = get_tree().get_first_node_in_group("projectiles")
+	#var projectiles = get_tree().get_first_node_in_group("projectiles")
+	var projectiles = get_tree().root
 	
-	projectile.position = gunPos.global_position
-	projectile.velocity = get_global_mouse_position() - projectile.position
+	projectile.position = gunPos.global_position + Vector2(300,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
+	projectile.rotation = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
 	
 	projectiles.add_child(projectile)
 	
