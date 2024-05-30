@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkvskqm0ypah1"]
+
+[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/bullet_template.tscn" id="1_rcjk7"]
+[ext_resource type="Texture2D" uid="uid://bryr4nlxsvtdm" path="res://Sprites/Projectiles/bullet.png" id="2_sscil"]
+[ext_resource type="Script" path="res://scene/Guns/projectiles/bullet_logic.gd" id="2_suej5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga34s"]
+size = Vector2(5, 2)
+
+[node name="Bullet_Template" instance=ExtResource("1_rcjk7")]
+script = ExtResource("2_suej5")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_sscil")
+
+[node name="CollisionShape2D" parent="Area_Of_Damage" index="0"]
+shape = SubResource("RectangleShape2D_ga34s")

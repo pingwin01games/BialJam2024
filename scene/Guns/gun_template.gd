@@ -17,6 +17,8 @@ var curAmmo = 30
 var maxMag = 3
 var curMag = 3
 
+var distanceToGun = 300
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,7 +36,7 @@ func shoot():
 	var projectiles = get_tree().get_first_node_in_group("projectiles")
 	#var projectiles = get_tree().root
 	
-	projectile.position = gunPos.global_position + Vector2(300,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
+	projectile.position = gunPos.global_position + Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
 	projectile.rotation = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
 	
 	projectiles.add_child(projectile)

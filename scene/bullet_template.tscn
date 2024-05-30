@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="2_h3a6x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkv4f"]
-size = Vector2(128, 128)
+size = Vector2(5, 2)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mp0yi"]
-radius = 128.0
+radius = 3.0
 
 [node name="Bullet_Template" type="CharacterBody2D"]
 collision_layer = 0

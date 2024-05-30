@@ -7,6 +7,7 @@ func _ready():
 	curAmmo = 30
 	maxMag = 6
 	curMag = 4
-
+	distanceToGun = 16
+	projectileScene = preload("res://scene/Guns/projectiles/bullet.tscn")
 
 
