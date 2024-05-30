@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfy4n1t24oort"]
+
+[ext_resource type="Texture2D" uid="uid://b0e4gwhmao3xe" path="res://Sprites/Guns/gun.svg" id="1_5xr48"]
+[ext_resource type="Script" path="res://scene/Guns/rocket_launcher.gd" id="1_gxxts"]
+
+[node name="Rocket_Launcher" type="Node2D"]
+script = ExtResource("1_gxxts")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5xr48")
+
+[node name="Shooting_Point" type="Marker2D" parent="."]
+position = Vector2(64, 0)

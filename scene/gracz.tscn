@@ -1,21 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://don334ykj1ehi"]
+[gd_scene load_steps=12 format=3 uid="uid://don334ykj1ehi"]
 
-[ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="1_ccwwm"]
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
+[ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="4_082ke"]
+[ext_resource type="Texture2D" uid="uid://nh1sflbvf35j" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
+[ext_resource type="Texture2D" uid="uid://ccwh3n60l2782" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
+[ext_resource type="Texture2D" uid="uid://ch3xvvhgqvy76" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
+[ext_resource type="Texture2D" uid="uid://dn5mf0sykbuki" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
+[ext_resource type="Texture2D" uid="uid://41bqvl687vky" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
+[ext_resource type="Texture2D" uid="uid://b6n0uf13kuwwf" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
 size = Vector2(128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bqahn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hlrhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1j4c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ujovt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m3x4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ppkw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0hb2j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_d3427")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ci8wv")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0, 1, 1)
-texture = ExtResource("1_ccwwm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -29,6 +57,8 @@ wait_time = 0.5
 
 [node name="hand" type="Node2D" parent="."]
 script = ExtResource("3_s1mo5")
+
+[node name="Gun_Template" parent="hand" instance=ExtResource("4_082ke")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -57,6 +87,12 @@ offset_top = 478.0
 offset_right = 637.0
 offset_bottom = 505.0
 show_percentage = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_bqahn")
+autoplay = "default"
+frame_progress = 0.607966
 
 [connection signal="timeout" from="RoF" to="hand" method="_on_ro_f_timeout"]
 [connection signal="timeout" from="Reload_Time" to="hand" method="_on_reload_time_timeout"]

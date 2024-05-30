@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var reload = $Reload_Time
-@onready var bonus_reload = $Bonus_Reload
-@onready var ammo_count = $CanvasLayer/UI/Ammo_Count
-@onready var reload_bar = $CanvasLayer/UI/Reload_bar
-@onready var rof = $RoF
+@onready var reload = $"../Reload_Time"
+@onready var bonus_reload = $"../Bonus_Reload"
+@onready var ammo_count = $"../CanvasLayer/UI/Ammo_Count"
+@onready var reload_bar = $"../CanvasLayer/UI/Reload_bar"
+@onready var rof = $"../RoF"
 
 var currentAmmo = 0
 var canShoot = true
