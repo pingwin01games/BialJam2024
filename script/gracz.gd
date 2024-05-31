@@ -22,6 +22,10 @@ var canDash = true
 var maxHP = 100
 var curHP = 100
 
+var printAmmo : String
+var printMag : String
+var printHP : String
+
 var startBonusReload = 0.3
 var starBonusReloadTime = 0.3
 
@@ -102,4 +106,4 @@ func hit(val):
 	curHP -= val
 	print_debug(curHP)
 	if curHP <= 0:
-		queue_free()
+		get_tree().reload_current_scene()
