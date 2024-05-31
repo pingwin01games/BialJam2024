@@ -19,8 +19,11 @@ position = Vector2(64, 0)
 [node name="ROF" type="Timer" parent="."]
 
 [node name="Area_Of_Picking_Up" type="Area2D" parent="."]
+collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Of_Picking_Up"]
 shape = SubResource("CircleShape2D_t2t2r")
 
 [connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]
+[connection signal="body_entered" from="Area_Of_Picking_Up" to="." method="_on_area_of_picking_up_body_entered"]
+[connection signal="body_exited" from="Area_Of_Picking_Up" to="." method="_on_area_of_picking_up_body_exited"]

@@ -4,9 +4,9 @@ extends Node2D
 @onready var bonus_reload = $"../Bonus_Reload"
 @onready var ammo_count = $"../CanvasLayer/UI/Ammo_Count"
 @onready var reload_bar = $"../CanvasLayer/UI/Reload_bar"
-@onready var rof = $"../RoF"
 
 var currentAmmo = 0
+var maxAmmo = 30
 var canShoot = true
 var reloading = false
 var startBonusReload = 0.3
@@ -23,14 +23,18 @@ func _ready():
 func _process(delta):
 	if get_child(0).has_method("get_info"):
 		currentAmmo = get_child(0).get_info("ammo")
+		maxAmmo = get_child(0).get_info("MAX")
+		
 	
-	
-	if Input.is_action_pressed("shoot"):
+	if Input.is_action_pressed("shoot") and reloading == false:
 		if get_child(0).has_method("shoot"):
 			get_child(0).shoot()
 	
 		
 	if Input.is_action_just_pressed("reload") and reloading == false:
+		if get_child(0).has_method("reload"):
+			get_child(0).reload()
+			
 		reload.start()
 		reloading = true
 		reload_bar.visible = true
@@ -59,11 +63,6 @@ func _process(delta):
 		elif reload_bar.modulate == Color(1,1,1) and reload.time_left != 1:
 			reload_bar.modulate = Color(1,0,0)
 			failBonusReloading = true
-
-func _on_ro_f_timeout():
-	canShoot = true
-	rof.stop()
-
 
 
 func _on_reload_time_timeout():

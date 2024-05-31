@@ -15,7 +15,7 @@ func _on_area_of_damage_body_entered(body):
 	if body.has_method("hit"):
 		body.hit(dmg)
 	else:
-		print("i huj")
+		return 0
 	queue_free()
 
 func pass_dmg(val):

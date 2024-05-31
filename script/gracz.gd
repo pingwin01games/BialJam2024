@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var hand = $hand
+@onready var pick_up = $CanvasLayer/UI/Can_Pick_Up
 
 
 const SPEED = 300.0
@@ -43,3 +44,8 @@ func _process(delta):
 	hand.position = Vector2(1,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
 	hand.rotation = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
 
+func show_pick_up():
+	pick_up.visible = true
+
+func hide_pick_up():
+	pick_up.visible = false
