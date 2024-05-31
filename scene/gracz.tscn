@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
-[ext_resource type="PackedScene" uid="uid://fkuvt0m44q6k" path="res://scene/Guns/minigun.tscn" id="3_t6yf6"]
+[ext_resource type="PackedScene" uid="uid://djvh26t85t4o3" path="res://scene/Guns/dmr.tscn" id="3_yua27"]
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="4_082ke"]
 [ext_resource type="Texture2D" uid="uid://ce0i3h1wcu3k8" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
 [ext_resource type="Texture2D" uid="uid://cy8ourctiuqwh" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
@@ -66,8 +66,7 @@ wait_time = 0.5
 position = Vector2(20, 0)
 script = ExtResource("3_s1mo5")
 
-[node name="Gun_Template2" parent="hand" instance=ExtResource("3_t6yf6")]
-z_index = 0
+[node name="Gun_Template2" parent="hand" instance=ExtResource("3_yua27")]
 
 [node name="Gun_Template" parent="hand" instance=ExtResource("4_082ke")]
 visible = false
