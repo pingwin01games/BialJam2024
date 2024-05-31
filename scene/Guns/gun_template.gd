@@ -45,7 +45,7 @@ func shoot():
 	
 		projectile.position = player.position #- Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)) + Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
 		projectile.rotation = atan2(get_global_mouse_position().y-player.position.y,get_global_mouse_position().x-player.position.x)
-	
+		projectile.dmg = dmg
 		projectiles.add_child(projectile)
 		ROF.start()
 	

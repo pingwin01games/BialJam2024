@@ -72,9 +72,7 @@ func _process(delta):
 		walking_cycle.flip_h = false
 	else:
 		walking_cycle.flip_h = true
-		print("flip")
-	
-		
+
 
 func show_pick_up():
 	pick_up.visible = true
