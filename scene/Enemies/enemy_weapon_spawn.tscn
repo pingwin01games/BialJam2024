@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3k3wfqdj4d2s"]
+
+[ext_resource type="Script" path="res://script/Enemies/enemy_weapon_spawn.gd" id="1_wa8ab"]
+[ext_resource type="Texture2D" uid="uid://dko6mq8rddper" path="res://Sprites/Guns/rckt202.png" id="2_nelno"]
+
+[node name="enem_weapon_spawn" type="CharacterBody2D"]
+script = ExtResource("1_wa8ab")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nelno")
+
+[node name="ROF" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]

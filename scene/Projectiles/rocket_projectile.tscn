@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3u5hrwwpl0ls"]
 
 [ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/bullet_template.tscn" id="1_lm713"]
-[ext_resource type="Texture2D" uid="uid://cs8pya4by2gh6" path="res://Sprites/Projectiles/rakieta.png" id="2_4vnem"]
+[ext_resource type="Texture2D" uid="uid://bkya8ttwxn8a1" path="res://Sprites/Projectiles/rakieta.png" id="2_4vnem"]
 [ext_resource type="Script" path="res://scene/Projectiles/rocket_projectile.gd" id="2_bb6yh"]
 
 [sub_resource type="Curve" id="Curve_umorw"]

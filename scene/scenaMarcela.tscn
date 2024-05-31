@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmmt8x7gpus51"]
+[gd_scene load_steps=7 format=3 uid="uid://bmmt8x7gpus51"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
 [ext_resource type="PackedScene" uid="uid://d0evp2gvvy8bt" path="res://scene/Enemies/Sucking_Mining_Enemy.tscn" id="2_mpa76"]
 [ext_resource type="PackedScene" uid="uid://c3bx8erap6rvr" path="res://scene/Pickable_Guns/pickable_weapon.tscn" id="3_osbrt"]
 [ext_resource type="PackedScene" uid="uid://vvss5k3n4nm0" path="res://scene/Enemies/turret_enemy.tscn" id="4_q6tv3"]
 [ext_resource type="PackedScene" uid="uid://d0at3br32a6al" path="res://scene/Enemies/faceshredder.tscn" id="5_eo3hc"]
+[ext_resource type="PackedScene" uid="uid://c3k3wfqdj4d2s" path="res://scene/Enemies/enemy_weapon_spawn.tscn" id="6_n12sk"]
 
 [node name="ScenaMarcela" type="Node2D"]
 
@@ -23,3 +24,6 @@ position = Vector2(-9, 436)
 
 [node name="FaceShredder" parent="." instance=ExtResource("5_eo3hc")]
 position = Vector2(0, -249)
+
+[node name="enem_weapon_spawn" parent="." instance=ExtResource("6_n12sk")]
+position = Vector2(602, -262)

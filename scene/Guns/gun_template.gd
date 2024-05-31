@@ -35,7 +35,6 @@ func reload():
 		#animationplayer.play("reload")
 
 func shoot():
-	
 	if canShoot == true and curAmmo > 0:
 		curAmmo -= 1
 		canShoot = false
