@@ -8,7 +8,7 @@
 [node name="PickableWeapon" type="Node2D"]
 script = ExtResource("1_iaed5")
 
-[node name="Gun_Tamplate" parent="." instance=ExtResource("2_slor6")]
+[node name="Gun_Template" parent="." instance=ExtResource("2_slor6")]
 
 [node name="PickupArea2D" type="Area2D" parent="."]
 

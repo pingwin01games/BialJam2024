@@ -17,7 +17,8 @@ var curAmmo = 30
 var maxMag = 3
 var curMag = 3
 
-var distanceToGun = 300
+var distanceToGun = 0
+
 
 var dmg = 100
 
