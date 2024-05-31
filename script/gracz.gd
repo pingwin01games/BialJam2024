@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var pick_up = $CanvasLayer/UI/Can_Pick_Up
 @onready var dodge = $Dodge_Time
 @onready var dodge_cooldown = $Dodge_Cooldown
+@onready var walking_cycle = $Walking_Cycle
 
 
 const SPEED = 300.0
@@ -23,15 +24,18 @@ var starBonusReloadTime = 0.3
 
 var direction : Vector2
 var old_direction : Vector2
+var atanek2
 
 func _ready():
 	pass
 
 
 func _process(delta):
-	
+
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
+	
+	atanek2 = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
 	
 	if Input.is_action_just_pressed("ui_accept") and canDash:
 		dashing = true
@@ -44,39 +48,31 @@ func _process(delta):
 		old_direction = direction
 	if dashing == true:
 		old_direction = old_direction
-	print(old_direction)
+	
 	
 	if direction:
+		walking_cycle.play("default")
 		if dashing:
-			velocity.x = old_direction.x 
-		
-			velocity.y = old_direction.y 
-		
-			velocity = velocity.normalized()
-		
-			velocity *= DASH_SPEED
+			velocity = old_direction.normalized() * DASH_SPEED
 		else:
-			velocity.x = direction.x 
-		
-			velocity.y = direction.y 
-		
-			velocity = velocity.normalized()
-		
-			velocity *= SPEED
+			velocity = direction.normalized() * SPEED
 
 	else:
+		walking_cycle.stop()
 		velocity.x = move_toward(velocity.x, 0, SPEED * 0.05)
 		velocity.y = move_toward(velocity.y, 0, SPEED * 0.05)
-	
-	
-	
 	
 
 	move_and_slide()
 	
-	hand.position = Vector2(1,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
-	hand.rotation = atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)
+	hand.position = Vector2(1,0).rotated(atanek2)
+	hand.rotation = atanek2
 	
+	if rad_to_deg(atanek2) > -90 and rad_to_deg(atanek2) < 90:
+		walking_cycle.flip_h = false
+	else:
+		walking_cycle.flip_h = true
+		print("flip")
 	
 		
 

@@ -67,6 +67,7 @@ position = Vector2(20, 0)
 script = ExtResource("3_s1mo5")
 
 [node name="Gun_Template2" parent="hand" instance=ExtResource("3_t6yf6")]
+z_index = 0
 
 [node name="Gun_Template" parent="hand" instance=ExtResource("4_082ke")]
 visible = false
@@ -115,7 +116,7 @@ text = "Switch Weapon
 E"
 horizontal_alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Walking_Cycle" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_bqahn")
 autoplay = "default"
