@@ -12,7 +12,7 @@ func _on_pickup_area_2d_body_entered(body):
 func _on_pickup_area_2d_body_exited(body):
 	if body.has_method("hide_pick_up"):
 		body.hide_pick_up()
-		body = null
+		player = null
 
 func _process(delta):
 	if Input.is_action_just_pressed("switch"):

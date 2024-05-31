@@ -2,10 +2,19 @@ extends "res://scene/Guns/gun_template.gd"
 
 
 func _ready():
-	maxAmmo = 4
-	curAmmo = 4
-	
-	maxMag = 4
-	curMag = 4
-	
+	dmg = 200
+	maxAmmo = 1
+	curAmmo = 1
+	maxMag = 5
+	curMag = 5
+	distanceToGun = 32
 	projectileScene = preload("res://scene/Projectiles/rocket_projectile.tscn")
+
+func get_info(co):
+	match co:
+		"ammo":
+			return curAmmo
+		"mag":
+			return curMag
+		"MAX":
+			return maxAmmo

@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy2o3bvhfjw5g"]
+[gd_scene load_steps=13 format=3 uid="uid://dy2o3bvhfjw5g"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_8i10d"]
 [ext_resource type="PackedScene" uid="uid://c2buksrl1610e" path="res://scene/blok.tscn" id="2_yiyiv"]
 [ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/enemy_2.tscn" id="3_m2b3q"]
 [ext_resource type="PackedScene" uid="uid://yu8vywfniohu" path="res://scene/Enemies/posessed_enemy.tscn" id="4_si4xp"]
+[ext_resource type="PackedScene" uid="uid://cqjbebpmb6b0j" path="res://scene/Pickable_Guns/pickable_aa12.tscn" id="5_uyt65"]
+[ext_resource type="PackedScene" uid="uid://bkm3dtvk1uueo" path="res://scene/Pickable_Guns/pickable_uzi_akimbo.tscn" id="6_l1hmn"]
+[ext_resource type="PackedScene" uid="uid://smn18a1b01jd" path="res://scene/Pickable_Guns/pickable_410rifle.tscn" id="7_w2nm5"]
+[ext_resource type="PackedScene" uid="uid://btccr1hb73h78" path="res://scene/Pickable_Guns/pickable_959jdj.tscn" id="8_bcwxy"]
+[ext_resource type="PackedScene" uid="uid://ddrvkqexqon5f" path="res://scene/Pickable_Guns/pickable_dmr.tscn" id="9_7mwvx"]
+[ext_resource type="PackedScene" uid="uid://n4h201l8kglq" path="res://scene/Pickable_Guns/pickable_minigun.tscn" id="10_vvxmp"]
+[ext_resource type="PackedScene" uid="uid://bgwnvuk6onq21" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="11_sd3rm"]
+[ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Pickable_Guns/pickable_shootgun.tscn" id="12_jfqyy"]
 
 [node name="World" type="Node2D"]
 
@@ -31,3 +39,27 @@ position = Vector2(339, -518)
 
 [node name="enemy3" parent="." instance=ExtResource("4_si4xp")]
 position = Vector2(15, -324)
+
+[node name="PickableWeapon" parent="." instance=ExtResource("5_uyt65")]
+position = Vector2(-519, 143)
+
+[node name="PickableWeapon2" parent="." instance=ExtResource("6_l1hmn")]
+position = Vector2(-356, 195)
+
+[node name="PickableWeapon3" parent="." instance=ExtResource("7_w2nm5")]
+position = Vector2(-142, 246)
+
+[node name="PickableWeapon4" parent="." instance=ExtResource("8_bcwxy")]
+position = Vector2(-382, 58)
+
+[node name="PickableWeapon5" parent="." instance=ExtResource("9_7mwvx")]
+position = Vector2(-494, 288)
+
+[node name="PickableWeapon6" parent="." instance=ExtResource("10_vvxmp")]
+position = Vector2(-341, 279)
+
+[node name="PickableWeapon7" parent="." instance=ExtResource("11_sd3rm")]
+position = Vector2(-532, 216)
+
+[node name="PickableWeapon8" parent="." instance=ExtResource("12_jfqyy")]
+position = Vector2(-210, 181)

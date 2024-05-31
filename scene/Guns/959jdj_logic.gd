@@ -8,5 +8,6 @@ func _ready():
 	curAmmo = 5
 	maxMag = 3
 	curMag = 3
+	projectileScene = preload("res://scene/Guns/projectiles/sniper_bullet.tscn")
 
 

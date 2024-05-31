@@ -21,10 +21,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if get_child(0).has_method("get_info"):
-		currentAmmo = get_child(0).get_info("ammo")
-		maxAmmo = get_child(0).get_info("MAX")
-		
+
+	if get_child(0) != null:
+		if get_child(0).has_method("get_info"):
+			currentAmmo = get_child(0).get_info("ammo")
+			maxAmmo = get_child(0).get_info("MAX")
+	else:
+		return 0
 	
 	if Input.is_action_pressed("shoot") and reloading == false:
 		if get_child(0).has_method("shoot"):
