@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var SPEED = 50
 
+var dmg = 10
 
 func _physics_process(delta):
 	
@@ -11,5 +12,11 @@ func _physics_process(delta):
 
 
 func _on_area_of_damage_body_entered(body):
-	body.queue_free()
+	if body.has_method("hit"):
+		body.hit(dmg)
+	else:
+		print("i huj")
 	queue_free()
+
+func pass_dmg(val):
+	dmg = val
