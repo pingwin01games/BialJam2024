@@ -19,6 +19,9 @@ var failBonusReloading = false
 var dashing = false
 var canDash = true
 
+var maxHP = 100
+var curHP = 100
+
 var startBonusReload = 0.3
 var starBonusReloadTime = 0.3
 
@@ -94,3 +97,9 @@ func _on_dodge_time_timeout():
 func _on_dodge_cooldown_timeout():
 	canDash = true
 	dodge_cooldown.stop()
+
+func hit(val):
+	curHP -= val
+	print_debug(curHP)
+	if curHP <= 0:
+		queue_free()
