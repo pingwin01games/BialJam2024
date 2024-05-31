@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cschdhlx3u7wl"]
+
+[ext_resource type="Script" path="res://script/Enemies/enemy_weapon_spawner.gd" id="1_lyu5f"]
+[ext_resource type="Texture2D" uid="uid://bo2wqo40ob5nj" path="res://Sprites/Enemies/enemy.svg" id="2_b81ht"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_23uww"]
+radius = 80.8084
+
+[node name="enemy_weapon_spawner" type="CharacterBody2D"]
+script = ExtResource("1_lyu5f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b81ht")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_23uww")
+
+[node name="Spawner_ROF" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Spawner_ROF" to="." method="_on_spawner_rof_timeout"]

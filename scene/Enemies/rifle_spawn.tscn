@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu2ybgcnojnxf"]
+
+[ext_resource type="Script" path="res://scene/Enemies/rifle_spawn.gd" id="1_o1uf1"]
+[ext_resource type="Texture2D" uid="uid://bkcct0yqflgmd" path="res://Sprites/Guns/410rifle.png" id="2_d1kfk"]
+
+[node name="rifle_spawn" type="CharacterBody2D"]
+script = ExtResource("1_o1uf1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d1kfk")
+
+[node name="ROF" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/enemy_2.tscn" id="1_qtrpv"]
 [ext_resource type="Script" path="res://scene/Enemies/boss1.gd" id="2_42p0s"]
-[ext_resource type="Texture2D" uid="uid://bsp712gcl41gr" path="res://Sprites/Enemies/Skeeb.png" id="3_vm4sn"]
+[ext_resource type="Texture2D" uid="uid://bc0ryswqghd2u" path="res://Sprites/Enemies/Skeeb.png" id="3_vm4sn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0l7l"]
 size = Vector2(300, 300)

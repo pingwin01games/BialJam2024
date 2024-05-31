@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var player
 @onready var rof = $ROF
-@onready var projectileScene = preload("res://scene/Projectiles/rocket_projectile.tscn")
+@onready var projectileScene
 
 var dmg = 5
 var canShoot = true
@@ -12,6 +12,7 @@ func _ready():
 	player = get_tree().get_first_node_in_group("player")
 
 func _process(delta):
+	player = get_tree().get_first_node_in_group("player")
 	rotation = atan2(player.position.y-position.y,player.position.x-position.x)
 	if canShoot:
 		shoot()
