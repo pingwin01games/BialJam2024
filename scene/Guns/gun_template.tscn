@@ -17,4 +17,7 @@ position = Vector2(64, 0)
 
 [node name="ROF" type="Timer" parent="."]
 
+[node name="Audio_Shot" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
+
 [connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]

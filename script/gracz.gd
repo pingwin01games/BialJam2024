@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var dodge = $Dodge_Time
 @onready var dodge_cooldown = $Dodge_Cooldown
 @onready var walking_cycle = $Walking_Cycle
+@onready var audio_dash = $Audio_dash
 
 
 const SPEED = 300.0
@@ -49,6 +50,7 @@ func _process(delta):
 		dashing = true
 		canDash = false
 		dodge.start()
+		audio_dash.play()
 		dodge_cooldown.start()
 		
 	

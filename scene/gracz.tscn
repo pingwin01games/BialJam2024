@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://don334ykj1ehi"]
+[gd_scene load_steps=13 format=3 uid="uid://don334ykj1ehi"]
 
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cnahha6lbs2a1" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
 [ext_resource type="Texture2D" uid="uid://dk2hcxgweglor" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
 [ext_resource type="Texture2D" uid="uid://cd21nheqyf6nm" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
+[ext_resource type="AudioStream" uid="uid://c1f5evaqjbco" path="res://audio/weapons/windup.wav" id="10_vaags"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
 size = Vector2(41, 73)
@@ -56,9 +57,9 @@ position_smoothing_enabled = true
 [node name="Bonus_Reload" type="Timer" parent="."]
 
 [node name="Dodge_Time" type="Timer" parent="."]
-wait_time = 0.5
 
 [node name="Dodge_Cooldown" type="Timer" parent="."]
+wait_time = 2.0
 
 [node name="hand" type="Node2D" parent="."]
 position = Vector2(20, 0)
@@ -134,6 +135,9 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_bqahn")
 autoplay = "default"
 frame_progress = 0.607966
+
+[node name="Audio_dash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vaags")
 
 [connection signal="timeout" from="Reload_Time" to="hand" method="_on_reload_time_timeout"]
 [connection signal="timeout" from="Bonus_Reload" to="hand" method="_on_bonus_reload_timeout"]

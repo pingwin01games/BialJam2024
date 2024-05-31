@@ -14,6 +14,7 @@ func _ready():
 
 func shoot():
 	if canShoot == true and curAmmo > 0:
+		audio_shot.play()
 		curAmmo -= 1
 		canShoot = false
 		for i in 6:

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://kvi1a847gtis"]
+[gd_scene load_steps=5 format=3 uid="uid://kvi1a847gtis"]
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_ikl3a"]
 [ext_resource type="Texture2D" uid="uid://c3430c22ng8pl" path="res://Sprites/Guns/uzi akimbo.png" id="2_4m14c"]
 [ext_resource type="Script" path="res://scene/Guns/uzi_akimbo_logic.gd" id="2_0456q"]
+[ext_resource type="AudioStream" uid="uid://bxqjdk72fbpvp" path="res://audio/weapons/410riflesound.wav" id="4_2dmh6"]
 
 [node name="Gun_Template" instance=ExtResource("1_ikl3a")]
 scale = Vector2(2, 2)
@@ -13,4 +14,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_4m14c")
 
 [node name="ROF" parent="." index="2"]
-wait_time = 0.02
+wait_time = 0.1
+
+[node name="Audio_Shot" parent="." index="3"]
+stream = ExtResource("4_2dmh6")

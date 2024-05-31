@@ -3,6 +3,7 @@ extends Node2D
 @onready var projectileScene : PackedScene = preload("res://scene/bullet_template.tscn")
 @onready var gunPos = $Gun_Point
 @onready var ROF = $ROF
+@onready var audio_shot = $Audio_Shot
 
 
 var canShoot = true
@@ -40,6 +41,7 @@ func shoot():
 	
 	
 	if canShoot == true and curAmmo > 0:
+		audio_shot.play()
 		curAmmo -= 1
 		canShoot = false
 		var projectile = projectileScene.instantiate()

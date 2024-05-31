@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3164t71i2uqx"]
+[gd_scene load_steps=5 format=3 uid="uid://c3164t71i2uqx"]
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_mvkni"]
 [ext_resource type="Script" path="res://scene/Guns/959jdj_logic.gd" id="2_m8fok"]
 [ext_resource type="Texture2D" uid="uid://cnh6feqkopdix" path="res://Sprites/Guns/959jdj.png" id="2_qp5dj"]
+[ext_resource type="AudioStream" uid="uid://b7kwi06spt08u" path="res://audio/weapons/sniperfire.wav" id="4_hsoiv"]
 
 [node name="Gun_Template" instance=ExtResource("1_mvkni")]
 scale = Vector2(2, 2)
@@ -11,3 +12,6 @@ script = ExtResource("2_m8fok")
 [node name="Gun_Sprite" parent="." index="0"]
 scale = Vector2(2, 2)
 texture = ExtResource("2_qp5dj")
+
+[node name="Audio_Shot" parent="." index="3"]
+stream = ExtResource("4_hsoiv")

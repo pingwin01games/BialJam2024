@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://btccr1hb73h78" path="res://scene/Pickable_Guns/pickable_959jdj.tscn" id="8_bcwxy"]
 [ext_resource type="PackedScene" uid="uid://ddrvkqexqon5f" path="res://scene/Pickable_Guns/pickable_dmr.tscn" id="9_7mwvx"]
 [ext_resource type="PackedScene" uid="uid://n4h201l8kglq" path="res://scene/Pickable_Guns/pickable_minigun.tscn" id="10_vvxmp"]
-[ext_resource type="PackedScene" uid="uid://bgwnvuk6onq21" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="11_sd3rm"]
+[ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="11_sd3rm"]
 [ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Pickable_Guns/pickable_shootgun.tscn" id="12_jfqyy"]
 [ext_resource type="PackedScene" uid="uid://de1ok1p7ph3sf" path="res://scene/Enemies/boss1.tscn" id="14_t7sae"]
 
