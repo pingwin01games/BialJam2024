@@ -61,20 +61,3 @@ func get_info(co):
 
 func _on_rof_timeout():
 	canShoot = true # Replace with function body.
-
-
-
-func _on_area_of_picking_up_body_entered(body):
-	if body.has_method("show_pick_up"):
-		body.show_pick_up()
-	else:
-		return 0
-
-
-func _on_area_of_picking_up_body_exited(body):
-	if body.has_method("hide_pick_up"):
-		body.hide_pick_up()
-	else:
-		return 0
-
-	

@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbrsi3jtottgr"]
+[gd_scene load_steps=3 format=3 uid="uid://dbrsi3jtottgr"]
 
 [ext_resource type="Script" path="res://scene/Guns/gun_template.gd" id="1_xghth"]
 [ext_resource type="Texture2D" uid="uid://b0e4gwhmao3xe" path="res://Sprites/Guns/gun.svg" id="2_fnq7p"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_t2t2r"]
-radius = 24.0
 
 [node name="Gun_Template" type="Node2D"]
 z_index = 2
@@ -20,12 +17,4 @@ position = Vector2(64, 0)
 
 [node name="ROF" type="Timer" parent="."]
 
-[node name="Area_Of_Picking_Up" type="Area2D" parent="."]
-collision_layer = 32
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Of_Picking_Up"]
-shape = SubResource("CircleShape2D_t2t2r")
-
 [connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]
-[connection signal="body_entered" from="Area_Of_Picking_Up" to="." method="_on_area_of_picking_up_body_entered"]
-[connection signal="body_exited" from="Area_Of_Picking_Up" to="." method="_on_area_of_picking_up_body_exited"]

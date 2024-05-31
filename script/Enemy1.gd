@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 var mine
 var canPlaceMine : bool = true
-var canSuck : bool = true
+var canSuck : bool = false
 var mineLimit = 10
 var curMineCount = 0
 

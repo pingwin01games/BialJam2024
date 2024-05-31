@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmmt8x7gpus51"]
+[gd_scene load_steps=4 format=3 uid="uid://bmmt8x7gpus51"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
 [ext_resource type="PackedScene" uid="uid://d0evp2gvvy8bt" path="res://scene/Enemies/enemy_1.tscn" id="2_mpa76"]
+[ext_resource type="PackedScene" uid="uid://c3bx8erap6rvr" path="res://scene/Pickable_Guns/pickable_weapon.tscn" id="3_osbrt"]
 
 [node name="ScenaMarcela" type="Node2D"]
 
@@ -11,3 +12,6 @@ position = Vector2(214, 3)
 [node name="Enemy1" parent="." instance=ExtResource("2_mpa76")]
 
 [node name="Node2D" type="Node2D" parent="." groups=["projectiles"]]
+
+[node name="PickableWeapon" parent="." instance=ExtResource("3_osbrt")]
+position = Vector2(-370, 86)

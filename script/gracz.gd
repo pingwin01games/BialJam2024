@@ -82,6 +82,11 @@ func show_pick_up():
 func hide_pick_up():
 	pick_up.visible = false
 
+func change_weapon(weapon):
+	var weaponOut = hand.get_child(0)
+	hand.add_child(weapon)
+	hand.remove_child(weaponOut)
+	return weaponOut
 
 func _on_dodge_time_timeout():
 	dashing = false
