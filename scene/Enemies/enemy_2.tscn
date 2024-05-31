@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6cgk320vn85q"]
+[gd_scene load_steps=5 format=3 uid="uid://c6cgk320vn85q"]
 
 [ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="1_7wpua"]
 [ext_resource type="Script" path="res://script/enemy_2.gd" id="1_l513w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y31qs"]
-size = Vector2(36, 36)
+size = Vector2(21, 29)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vxg5"]
+radius = 1024.0
 
 [node name="enemy2" type="CharacterBody2D"]
 collision_layer = 4
@@ -17,3 +20,14 @@ shape = SubResource("RectangleShape2D_y31qs")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.494118, 0.0313726, 1)
 texture = ExtResource("1_7wpua")
+
+[node name="Area_Of_Attack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Of_Attack"]
+shape = SubResource("CircleShape2D_8vxg5")
+
+[node name="RoF" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area_Of_Attack" to="." method="_on_area_of_attack_body_entered"]
+[connection signal="body_exited" from="Area_Of_Attack" to="." method="_on_area_of_attack_body_exited"]
+[connection signal="timeout" from="RoF" to="." method="_on_rof_timeout"]
