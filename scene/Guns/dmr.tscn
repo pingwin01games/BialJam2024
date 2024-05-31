@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cesr4e68b0m10" path="res://Sprites/Guns/dmr.png" id="2_nr54g"]
 
 [node name="Gun_Template" instance=ExtResource("1_qdp5c")]
+scale = Vector2(2, 2)
 script = ExtResource("2_cxwj4")
 
 [node name="Gun_Sprite" parent="." index="0"]

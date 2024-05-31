@@ -2,13 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_nc3pn"]
 [ext_resource type="Script" path="res://scene/Guns/rocket_launcher.gd" id="2_0wosh"]
-[ext_resource type="Texture2D" uid="uid://dko6mq8rddper" path="res://Sprites/Guns/rckt202.png" id="3_3cg4c"]
+[ext_resource type="Texture2D" uid="uid://cg4mrfttsimxu" path="res://Sprites/Guns/rckt202.png" id="3_3cg4c"]
 
 [node name="Rocket_Launcher" instance=ExtResource("1_nc3pn")]
+scale = Vector2(2, 2)
 script = ExtResource("2_0wosh")
 
 [node name="Gun_Sprite" parent="." index="0"]
-scale = Vector2(1, 1)
+scale = Vector2(2, 2)
 texture = ExtResource("3_3cg4c")
 
 [node name="ROF" parent="." index="2"]

@@ -2,9 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_mvkni"]
 [ext_resource type="Script" path="res://scene/Guns/959jdj_logic.gd" id="2_m8fok"]
-[ext_resource type="Texture2D" uid="uid://cmdg20d4wy5vs" path="res://Sprites/Guns/959jdj.png" id="2_qp5dj"]
+[ext_resource type="Texture2D" uid="uid://cnh6feqkopdix" path="res://Sprites/Guns/959jdj.png" id="2_qp5dj"]
 
 [node name="Gun_Template" instance=ExtResource("1_mvkni")]
+scale = Vector2(2, 2)
 script = ExtResource("2_m8fok")
 
 [node name="Gun_Sprite" parent="." index="0"]

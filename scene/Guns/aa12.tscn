@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://scene/Guns/aa12_logic.gd" id="2_wk1kb"]
 
 [node name="Gun_Template" instance=ExtResource("1_enpfu")]
+scale = Vector2(2, 2)
 script = ExtResource("2_wk1kb")
 
 [node name="Gun_Sprite" parent="." index="0"]
