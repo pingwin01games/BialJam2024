@@ -10,3 +10,6 @@ script = ExtResource("2_0456q")
 [node name="Gun_Sprite" parent="." index="0"]
 scale = Vector2(2, 2)
 texture = ExtResource("2_4m14c")
+
+[node name="ROF" parent="." index="2"]
+wait_time = 0.02
