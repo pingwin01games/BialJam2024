@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgwnvuk6onq21"]
+[gd_scene load_steps=4 format=3 uid="uid://drvhs40ay0qcl"]
 
 [ext_resource type="Script" path="res://script/Weapon/PickableWeapon_Template.gd" id="1_iaed5"]
 [ext_resource type="PackedScene" uid="uid://dfy4n1t24oort" path="res://scene/Guns/rocket_launcher.tscn" id="2_slor6"]
