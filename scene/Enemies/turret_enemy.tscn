@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://vvss5k3n4nm0"]
+
+[ext_resource type="Script" path="res://script/Enemies/Turret_Enemy.gd" id="1_42722"]
+[ext_resource type="Texture2D" uid="uid://bo2wqo40ob5nj" path="res://Sprites/Enemies/enemy.svg" id="2_31map"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqdcu"]
+size = Vector2(134, 134)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v6518"]
+radius = 389.667
+
+[node name="Turret_Enemy" type="CharacterBody2D"]
+script = ExtResource("1_42722")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_31map")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vqdcu")
+
+[node name="Shooting_Pos" type="Marker2D" parent="."]
+position = Vector2(83, 0)
+
+[node name="Player_Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_Detector"]
+shape = SubResource("CircleShape2D_v6518")
+debug_color = Color(0.916867, 0.19585, 0.528997, 0.42)
+
+[node name="ROF" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="body_entered" from="Player_Detector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_exited" from="Player_Detector" to="." method="_on_player_detector_body_exited"]
+[connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]
