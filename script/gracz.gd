@@ -12,7 +12,8 @@ const DASH_SPEED = 500.0
 const MAXAMMO = 10
 
 var canShoot = true
-var currentAmmo 
+var currentAmmo = 0
+var currentMag = 0
 var reloading = false
 var bonusReloading = false
 var failBonusReloading = false
@@ -38,7 +39,12 @@ func _ready():
 
 
 func _process(delta):
-
+	printAmmo
+	printMag 
+	
+	$CanvasLayer/UI/Ammo_Count.text = str(currentAmmo)+' / '+str(currentMag)
+	$CanvasLayer/UI/HP_Display.text = str(curHP)
+	
 	direction.x = Input.get_axis("ui_left", "ui_right")
 	direction.y = Input.get_axis("ui_up", "ui_down")
 	

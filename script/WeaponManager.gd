@@ -4,9 +4,11 @@ extends Node2D
 @onready var bonus_reload = $"../Bonus_Reload"
 @onready var ammo_count = $"../CanvasLayer/UI/Ammo_Count"
 @onready var reload_bar = $"../CanvasLayer/UI/Reload_bar"
+@onready var player = $".."
 
 var currentAmmo = 0
 var maxAmmo = 30
+var currentMag = 2
 var canShoot = true
 var reloading = false
 var startBonusReload = 0.3
@@ -21,11 +23,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
+	player.currentAmmo = currentAmmo
+	player.currentMag = currentMag
+	
 	if get_child(0) != null:
 		if get_child(0).has_method("get_info"):
 			currentAmmo = get_child(0).get_info("ammo")
 			maxAmmo = get_child(0).get_info("MAX")
+			currentMag = get_child(0).get_info("mag")
 	else:
 		return 0
 	

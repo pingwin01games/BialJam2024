@@ -110,6 +110,11 @@ text = "Switch Weapon
 E"
 horizontal_alignment = 1
 
+[node name="HP_Display" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="Walking_Cycle" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_bqahn")
