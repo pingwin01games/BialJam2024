@@ -8,4 +8,4 @@ func _ready():
 	maxMag = 3
 	curMag = 3
 	distanceToGun = 32
-	projectileScene = preload("res://scene/Guns/projectiles/bullet.tscn")
+	projectileScene = preload("res://scene/Guns/projectiles/sniper_bullet.tscn")

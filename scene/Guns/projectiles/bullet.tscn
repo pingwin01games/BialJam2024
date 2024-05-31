@@ -19,5 +19,6 @@ shape = SubResource("RectangleShape2D_ga34s")
 
 [node name="Time_Of_Deletion" type="Timer" parent="." index="3"]
 wait_time = 6.0
+autostart = true
 
 [connection signal="timeout" from="Time_Of_Deletion" to="." method="_on_time_of_deletion_timeout"]

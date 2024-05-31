@@ -7,7 +7,7 @@
 size = Vector2(5, 2)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mp0yi"]
-radius = 3.0
+radius = 36.2215
 
 [node name="Bullet_Template" type="CharacterBody2D"]
 collision_layer = 0
