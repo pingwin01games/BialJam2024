@@ -2,7 +2,7 @@ extends "res://script/enemy_2.gd"
 
 @onready var walking_cycle = $Walking_Cycle
 
-
+var maxHP = 1000
 
 func _ready():
 	SPEED = 10
@@ -44,3 +44,5 @@ func _process(delta):
 	
 	move_and_slide()
 	
+func get_hp():
+	return[hp,maxHP]
