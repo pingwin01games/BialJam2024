@@ -6,15 +6,14 @@ var projectileScene = preload("res://scene/Guns/projectiles/enemy_saw.tscn")
 @onready var rof = $RoF
 
 
-const SPEED = 100
-const RUN_SPEED = 200
+var SPEED = 100
+var RUN_SPEED = 200
 
 var hp = 100
 var dmg = 10
 
 var player : Vector2 = Vector2.ZERO
 var kierunek_ruchu : Vector2 = Vector2.ZERO
-var current_speed = 100
 
 var canShoot = false
 var Shooting = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dy2o3bvhfjw5g"]
+[gd_scene load_steps=15 format=3 uid="uid://dy2o3bvhfjw5g"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_8i10d"]
 [ext_resource type="PackedScene" uid="uid://c2buksrl1610e" path="res://scene/blok.tscn" id="2_yiyiv"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://n4h201l8kglq" path="res://scene/Pickable_Guns/pickable_minigun.tscn" id="10_vvxmp"]
 [ext_resource type="PackedScene" uid="uid://bgwnvuk6onq21" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="11_sd3rm"]
 [ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Pickable_Guns/pickable_shootgun.tscn" id="12_jfqyy"]
+[ext_resource type="PackedScene" uid="uid://de1ok1p7ph3sf" path="res://scene/Enemies/boss1.tscn" id="14_t7sae"]
 
 [node name="World" type="Node2D"]
 
@@ -30,6 +31,9 @@ position = Vector2(339, -518)
 
 [node name="enemy4" parent="Enemies" instance=ExtResource("4_joqdc")]
 position = Vector2(1457, 668)
+
+[node name="enemy5" parent="Enemies" instance=ExtResource("14_t7sae")]
+position = Vector2(-2339, 1513)
 
 [node name="Pickable" type="Node2D" parent="."]
 
