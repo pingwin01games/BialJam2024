@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_woyli"]
 [ext_resource type="Script" path="res://scene/Guns/410rifle_logic.gd" id="2_ipib5"]
-[ext_resource type="Texture2D" uid="uid://bkcct0yqflgmd" path="res://Sprites/Guns/410rifle.png" id="3_afr62"]
+[ext_resource type="Texture2D" uid="uid://b5sya5dhop1u7" path="res://Sprites/Guns/410rifle.png" id="3_afr62"]
 
 [node name="Gun_Template" instance=ExtResource("1_woyli")]
 script = ExtResource("2_ipib5")

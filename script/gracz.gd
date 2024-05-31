@@ -23,10 +23,6 @@ var canDash = true
 var maxHP = 100
 var curHP = 100
 
-var printAmmo : String
-var printMag : String
-var printHP : String
-
 var startBonusReload = 0.3
 var starBonusReloadTime = 0.3
 
@@ -39,8 +35,7 @@ func _ready():
 
 
 func _process(delta):
-	printAmmo
-	printMag 
+
 	
 	$CanvasLayer/UI/Ammo_Count.text = str(currentAmmo)+' / '+str(currentMag)
 	$CanvasLayer/UI/HP_Display.text = str(curHP)

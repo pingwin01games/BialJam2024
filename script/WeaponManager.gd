@@ -43,6 +43,7 @@ func _process(delta):
 		if get_child(0).has_method("reload"):
 			get_child(0).reload()
 			
+		
 		reload.start()
 		reloading = true
 		reload_bar.visible = true

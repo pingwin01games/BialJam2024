@@ -29,12 +29,16 @@ func _ready():
 
 
 func reload():
+	if curAmmo == 0 and curMag == 0:
+		return 0
 	if(curMag>0 and curAmmo<maxAmmo):
 		curMag -= 1
 		curAmmo = maxAmmo
 		#animationplayer.play("reload")
 
 func shoot():
+	
+	
 	if canShoot == true and curAmmo > 0:
 		curAmmo -= 1
 		canShoot = false
