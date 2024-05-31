@@ -25,7 +25,7 @@ func _process(delta):
 		currentAmmo = get_child(0).get_info("ammo")
 	
 	
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		if get_child(0).has_method("shoot"):
 			get_child(0).shoot()
 	
