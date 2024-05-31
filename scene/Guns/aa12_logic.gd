@@ -1,13 +1,12 @@
 extends "res://scene/Guns/gun_template.gd"
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	dmg = 24
-	maxAmmo = 6
-	curAmmo = 6
-	maxMag = 4
-	curMag = 4
+	dmg = 12
+	maxAmmo = 8
+	curAmmo = 8
+	maxMag = 3
+	curMag = 3
 	distanceToGun = 32
 	projectileScene = preload("res://scene/Guns/projectiles/bullet.tscn")
 
