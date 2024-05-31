@@ -22,7 +22,7 @@ func shoot():
 			var player = get_tree().get_first_node_in_group("player")
 			projectile.dmg = dmg
 			projectile.position = player.position #- Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x)) + Vector2(distanceToGun,0).rotated(atan2(get_global_mouse_position().y-position.y,get_global_mouse_position().x-position.x))
-			projectile.rotation = randf_range(-0.5, 0.5) + atan2(get_global_mouse_position().y-player.position.y,get_global_mouse_position().x-player.position.x)
+			projectile.rotation = randf_range(-0.2, 0.2) + atan2(get_global_mouse_position().y-player.position.y,get_global_mouse_position().x-player.position.x)
 	
 			projectiles.add_child(projectile)
 		ROF.start()
