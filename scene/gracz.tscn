@@ -60,6 +60,8 @@ position_smoothing_enabled = true
 [node name="Dodge_Time" type="Timer" parent="."]
 wait_time = 0.5
 
+[node name="Dodge_Cooldown" type="Timer" parent="."]
+
 [node name="hand" type="Node2D" parent="."]
 position = Vector2(20, 0)
 script = ExtResource("3_s1mo5")
@@ -127,3 +129,5 @@ shape = SubResource("CircleShape2D_wcr1a")
 
 [connection signal="timeout" from="Reload_Time" to="hand" method="_on_reload_time_timeout"]
 [connection signal="timeout" from="Bonus_Reload" to="hand" method="_on_bonus_reload_timeout"]
+[connection signal="timeout" from="Dodge_Time" to="." method="_on_dodge_time_timeout"]
+[connection signal="timeout" from="Dodge_Cooldown" to="." method="_on_dodge_cooldown_timeout"]
