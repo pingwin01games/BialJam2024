@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://yu8vywfniohu"]
+[gd_scene load_steps=3 format=3 uid="uid://djn31w47bo5o5"]
 
 [ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/enemy_2.tscn" id="1_8cila"]
 [ext_resource type="Texture2D" uid="uid://vcdnmrr8sper" path="res://Sprites/Enemies/Posessed1.png" id="2_3rxdd"]

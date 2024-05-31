@@ -5,14 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://d4fj86erkxiw4" path="res://Sprites/Enemies/faceshredder.png" id="2_ym6ke"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5twe"]
-radius = 34.1321
+radius = 62.1289
 
-[node name="FaceShredder" instance=ExtResource("1_0xmai")]
+[node name="Faceshredder" instance=ExtResource("1_0xmai")]
 motion_mode = 1
 script = ExtResource("2_4lrdq")
 
 [node name="Sprite2D" parent="." index="1"]
 modulate = Color(1, 1, 1, 1)
+scale = Vector2(2, 2)
 texture = ExtResource("2_ym6ke")
 
 [node name="Attack_Area" type="Area2D" parent="." index="2"]

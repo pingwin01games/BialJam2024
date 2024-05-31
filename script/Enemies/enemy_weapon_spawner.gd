@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var spawnerROF = $Spawner_ROF
 var weaponsSpawnList=[]
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var canPlaceMine : bool = true
 var canSuck : bool = false
@@ -55,5 +56,12 @@ func SpawnWeapon():
 	
 	newWeaponSpawn.position = minePosition
 
+func OnDeath():
+	animated_sprite_2d.play("death")
+
 func _on_spawner_rof_timeout():
 	canPlaceMine = true
+
+
+func _on_animated_sprite_2d_animation_finished():
+	queue_free()
