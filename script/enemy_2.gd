@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 100
 const RUN_SPEED = 200
 
-var hp = 10
+var hp = 100
 
 var pozycja_gracza : Vector2 = Vector2.ZERO
 var kierunek_ruchu : Vector2 = Vector2.ZERO
