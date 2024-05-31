@@ -1,5 +1,7 @@
 extends "res://scene/Guns/gun_template.gd"
 
+var sprite_weapon = load("res://Sprites/Hud/uzitohud.png")
+
 func _ready():
 	dmg = 10
 	maxAmmo = 50

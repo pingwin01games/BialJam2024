@@ -31,7 +31,7 @@ var old_direction : Vector2
 var atanek2
 
 func _ready():
-	pass
+	$CanvasLayer/UI/Weapon_Texture.texture = hand.get_child(0).sprite_weapon
 
 
 func _process(delta):
@@ -90,6 +90,7 @@ func hide_pick_up():
 
 func change_weapon(weapon):
 	var weaponOut = hand.get_child(0)
+	$CanvasLayer/UI/Weapon_Texture.texture = weapon.sprite_weapon
 	hand.add_child(weapon)
 	hand.remove_child(weaponOut)
 	return weaponOut

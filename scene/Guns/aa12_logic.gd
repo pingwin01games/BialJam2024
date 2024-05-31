@@ -1,5 +1,6 @@
 extends "res://scene/Guns/gun_template.gd"
 
+var sprite_weapon = load("res://Sprites/Hud/aa12hud.png")
 
 func _ready():
 	dmg = 12

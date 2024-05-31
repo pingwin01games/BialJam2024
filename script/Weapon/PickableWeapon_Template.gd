@@ -3,6 +3,8 @@ extends Node2D
 var player
 @onready var gun = $Gun_Template
 
+
+
 func _on_pickup_area_2d_body_entered(body):
 	if body.has_method("show_pick_up"):
 		body.show_pick_up()

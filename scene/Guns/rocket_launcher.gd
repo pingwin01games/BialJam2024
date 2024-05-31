@@ -1,12 +1,13 @@
 extends "res://scene/Guns/gun_template.gd"
 
+var sprite_weapon = load("res://Sprites/Hud/m202tohud-removebg-preview.png")
 
 func _ready():
 	dmg = 200
-	maxAmmo = 1
-	curAmmo = 1
-	maxMag = 5
-	curMag = 5
+	maxAmmo = 4
+	curAmmo = 4
+	maxMag = 4
+	curMag = 4
 	distanceToGun = 32
 	projectileScene = preload("res://scene/Projectiles/rocket_projectile.tscn")
 

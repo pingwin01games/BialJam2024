@@ -115,6 +115,17 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="Weapon_Texture" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 0.035
+anchor_bottom = 1.0
+offset_top = 227.0
+offset_right = 218.84
+offset_bottom = 318.0
+grow_vertical = 0
+
 [node name="Walking_Cycle" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_bqahn")
