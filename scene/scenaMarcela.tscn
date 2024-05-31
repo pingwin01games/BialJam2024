@@ -9,3 +9,5 @@
 position = Vector2(214, 3)
 
 [node name="Enemy1" parent="." instance=ExtResource("2_mpa76")]
+
+[node name="Node2D" type="Node2D" parent="." groups=["projectiles"]]
