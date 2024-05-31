@@ -3,6 +3,7 @@ extends "res://scene/Guns/gun_template.gd"
 
 
 func _ready():
+	dmg = 30
 	maxAmmo = 30
 	curAmmo = 30
 	maxMag = 6
