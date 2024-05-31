@@ -200,6 +200,9 @@ shape = SubResource("RectangleShape2D_m0l7l")
 visible = false
 modulate = Color(1, 1, 1, 1)
 
+[node name="RoF" parent="." index="3"]
+wait_time = 0.5
+
 [node name="Walking_Cycle" type="AnimatedSprite2D" parent="." index="4"]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_38m4u")

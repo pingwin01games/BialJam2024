@@ -3,12 +3,14 @@ extends "res://script/enemy_2.gd"
 @onready var walking_cycle = $Walking_Cycle
 
 
+
 func _ready():
 	SPEED = 10
 	RUN_SPEED = 20
 	hp = 1000
 	dmg = 10
 	projectileScene = preload("res://scene/Guns/projectiles/thing_projectile.tscn")
+	rof.wait_time = 0.5
 
 func _process(delta):
 	
@@ -36,7 +38,9 @@ func _process(delta):
 		projectiles.add_child(projectile)
 		Shooting = true
 		rof.start()
-		
+	
+	if hp < 500:
+		rof.wait_time = 0.25
 	
 	move_and_slide()
 	
