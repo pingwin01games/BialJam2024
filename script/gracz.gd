@@ -39,7 +39,9 @@ func _ready():
 
 
 func _process(delta):
-
+	
+	if curHP > maxAmmo:
+		curHP += 1*delta
 	
 	$CanvasLayer/UI/Ammo_Count.text = str(currentAmmo)+' / '+str(maxAmmo) +'\n'+"Mags: " + str(currentMag)
 	$CanvasLayer/UI/HP_Display.text = str(curHP)
