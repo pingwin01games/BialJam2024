@@ -10,7 +10,7 @@ var canSuck : bool = false
 var SPEED = 100
 var RUN_SPEED = 200
 
-var hp = 75
+var hp = 125
 
 var player : Vector2 = Vector2.ZERO
 var movementDirection : Vector2 = Vector2.ZERO

@@ -253,6 +253,8 @@ animations = [{
 }]
 
 [node name="Death_Possesed" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 27
 script = ExtResource("1_3vo14")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

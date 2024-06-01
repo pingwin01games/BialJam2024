@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbrsi3jtottgr"]
+[gd_scene load_steps=4 format=3 uid="uid://dbrsi3jtottgr"]
 
 [ext_resource type="Script" path="res://script/Guns/gun_template.gd" id="1_xghth"]
 [ext_resource type="Texture2D" uid="uid://b0e4gwhmao3xe" path="res://Sprites/Guns/gun.svg" id="2_fnq7p"]
+[ext_resource type="Texture2D" uid="uid://djdbdi08nyic8" path="res://Sprites/Projectiles/Muzzle_flash.png" id="3_0ejxp"]
 
 [node name="Gun_Template2" type="Node2D"]
 z_index = 2
@@ -20,4 +21,14 @@ position = Vector2(64, 0)
 [node name="Audio_Shot" type="AudioStreamPlayer" parent="."]
 volume_db = -20.0
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(14, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_0ejxp")
+
+[node name="MuzzleTimer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]
+[connection signal="timeout" from="MuzzleTimer" to="." method="_on_muzzle_timer_timeout"]

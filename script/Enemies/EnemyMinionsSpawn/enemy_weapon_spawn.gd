@@ -26,6 +26,7 @@ func shoot():
 	var projectile = projectileScene.instantiate()
 	get_tree().get_first_node_in_group("projectiles").add_child(projectile)
 	projectile.get_child(2).set_collision_mask(1)
+	projectile.get_child(2).set_collision_mask_value(3,0)
 	projectile.position= global_position
 	projectile.rotation = atan2(player.position.y-position.y,player.position.x-position.x)
 	projectile.dmg = dmg

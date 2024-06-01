@@ -5,6 +5,8 @@ extends Node2D
 @onready var ROF = $ROF
 @onready var audio_shot = $Audio_Shot
 @onready var gun_sprite = $Gun_Sprite
+@onready var sprite_2d = $Sprite2D
+@onready var muzzle_timer = $MuzzleTimer
 
 
 var canShoot = true
@@ -55,6 +57,9 @@ func shoot():
 		projectile.dmg = dmg
 		projectiles.add_child(projectile)
 		ROF.start()
+		sprite_2d.visible = true
+		muzzle_timer.start()
+		
 	
 func get_info(co):
 	match co:
@@ -70,3 +75,7 @@ func Flip(horizontal):
 
 func _on_rof_timeout():
 	canShoot = true # Replace with function body.
+
+
+func _on_muzzle_timer_timeout():
+	sprite_2d.visible = false
