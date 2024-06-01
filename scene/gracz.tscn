@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
 [ext_resource type="PackedScene" uid="uid://dhs53850qfmlr" path="res://scene/Guns/410rifle.tscn" id="3_g6yus"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
-[ext_resource type="Texture2D" uid="uid://ce0i3h1wcu3k8" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
-[ext_resource type="Texture2D" uid="uid://cy8ourctiuqwh" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
-[ext_resource type="Texture2D" uid="uid://k4vypc8i4jcg" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
-[ext_resource type="Texture2D" uid="uid://cnahha6lbs2a1" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
-[ext_resource type="Texture2D" uid="uid://dk2hcxgweglor" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
-[ext_resource type="Texture2D" uid="uid://cd21nheqyf6nm" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
-[ext_resource type="AudioStream" uid="uid://c1f5evaqjbco" path="res://audio/weapons/windup.wav" id="10_vaags"]
+[ext_resource type="Texture2D" uid="uid://nh1sflbvf35j" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
+[ext_resource type="Texture2D" uid="uid://ccwh3n60l2782" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
+[ext_resource type="Texture2D" uid="uid://ch3xvvhgqvy76" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
+[ext_resource type="Texture2D" uid="uid://dn5mf0sykbuki" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
+[ext_resource type="Texture2D" uid="uid://41bqvl687vky" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
+[ext_resource type="Texture2D" uid="uid://b6n0uf13kuwwf" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
+[ext_resource type="AudioStream" uid="uid://bahy71l8lkeua" path="res://audio/weapons/windup.wav" id="10_vaags"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
 size = Vector2(41, 73)
@@ -115,6 +115,7 @@ value = 1.0
 show_percentage = false
 
 [node name="Boss_Hp_Bar" type="ProgressBar" parent="CanvasLayer/UI"]
+visible = false
 modulate = Color(1, 0, 0, 1)
 z_index = 2
 layout_mode = 1
