@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://de1ok1p7ph3sf"]
+[gd_scene load_steps=32 format=3 uid="uid://de1ok1p7ph3sf"]
 
 [ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_qtrpv"]
 [ext_resource type="Script" path="res://script/Enemies/boss1.gd" id="2_42p0s"]
@@ -190,6 +190,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xqqv"]
+radius = 769.0
+
 [node name="Skeeb" instance=ExtResource("1_qtrpv")]
 script = ExtResource("2_42p0s")
 
@@ -198,7 +201,6 @@ shape = SubResource("RectangleShape2D_m0l7l")
 
 [node name="Sprite2D" parent="." index="1"]
 visible = false
-modulate = Color(1, 1, 1, 1)
 
 [node name="RoF" parent="." index="3"]
 wait_time = 0.5
@@ -207,3 +209,13 @@ wait_time = 0.5
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_38m4u")
 frame = 1
+
+[node name="PlayerDetector" type="Area2D" parent="." index="5"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" index="0"]
+shape = SubResource("CircleShape2D_5xqqv")
+debug_color = Color(0, 0.622677, 0.544081, 0.42)
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_exited" from="PlayerDetector" to="." method="_on_player_detector_body_exited"]

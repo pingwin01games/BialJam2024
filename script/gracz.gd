@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var audio_dash = $Audio_dash
 @onready var boss_hp_bar = $CanvasLayer/UI/Boss_Hp_Bar
 @onready var hp_bar = $CanvasLayer/UI/Hp_Bar
+@onready var boss_name_tag = $CanvasLayer/UI/Boss_Name_Tag
 
 
 const SPEED = 300.0
@@ -122,5 +123,7 @@ func BossOutRange():
 	boss_hp_bar.visible=false
 
 func BossHpUpdate(curhp,maxhp):
-	
 	boss_hp_bar.value = curhp/maxhp
+
+func BossName(bossname):
+	boss_name_tag.text = bossname

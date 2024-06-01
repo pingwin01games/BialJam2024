@@ -56,9 +56,11 @@ func _on_mines_rof_timeout():
 
 func _on_player_detector_body_entered(body):
 	player = body
+	player.BossName("The Lungs")
+	player.BossHpUpdate(curHP,maxHP)
 	body.BossInRange()
 
 
 func _on_player_detector_body_exited(body):
-	player = false
+	player = null
 	body.BossOutRange()

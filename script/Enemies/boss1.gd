@@ -4,6 +4,8 @@ extends "res://script/Enemies/enemy_2.gd"
 
 var maxHP = 1000
 
+var playerObject
+
 func _ready():
 	SPEED = 10
 	RUN_SPEED = 20
@@ -46,3 +48,22 @@ func _process(delta):
 	
 func get_hp():
 	return[hp,maxHP]
+
+func hit(val):
+	hp -= val
+	playerObject.BossHpUpdate(hp,maxHP)
+	playerObject.BossName("S?#ke38?b")
+	if(hp<=0):
+		playerObject.BossOutRange()
+		queue_free()
+
+func _on_player_detector_body_entered(body):
+	playerObject = body
+	playerObject.BossHpUpdate(hp,maxHP)
+	playerObject.BossName("S?#ke38?b")
+	body.BossInRange()
+
+
+func _on_player_detector_body_exited(body):
+	playerObject = null
+	body.BossOutRange()
