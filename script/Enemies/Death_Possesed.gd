@@ -20,6 +20,7 @@ var weaponSpawnPos = Vector2(250,250)
 func _ready():
 	weaponsSpawnList.append(preload("res://scene/Enemies/EnemyMinionSpawns/rocket_launcher_spawn.tscn"))
 	weaponsSpawnList.append(preload("res://scene/Enemies/EnemyMinionSpawns/rifle_spawn.tscn"))
+	weaponsSpawnList.append(preload("res://scene/Enemies/EnemyMinionSpawns/uzi_spawn.tscn"))
 
 func _process(delta):
 	if(canPlaceMine == true):

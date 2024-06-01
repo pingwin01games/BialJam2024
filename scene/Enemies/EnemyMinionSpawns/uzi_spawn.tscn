@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj3k1prgyxy71"]
+
+[ext_resource type="Script" path="res://script/Enemies/EnemyMinionsSpawn/uzi_spawn.gd" id="1_qrbl2"]
+[ext_resource type="Texture2D" uid="uid://de7whcviep18q" path="res://Sprites/Guns/uzi akimbo.png" id="2_88fjg"]
+
+[node name="uzi_spawn" type="CharacterBody2D"]
+script = ExtResource("1_qrbl2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_88fjg")
+
+[node name="ROF" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="timeout" from="ROF" to="." method="_on_rof_timeout"]
