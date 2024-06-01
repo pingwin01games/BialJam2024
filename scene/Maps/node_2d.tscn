@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://424lhkxt6yv6"]
+[gd_scene load_steps=28 format=3 uid="uid://424lhkxt6yv6"]
 
 [ext_resource type="PackedScene" path="res://scene/Tilesets/tile_mapbydomi.tscn" id="1_cxxyd"]
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_jw8ry"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="22_8j5x1"]
 [ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Pickable_Guns/pickable_shootgun.tscn" id="23_4mwff"]
 [ext_resource type="AudioStream" uid="uid://be0jh73k6teh1" path="res://audio/music/metal-dark-matter-111451 (1).mp3" id="24_h01qb"]
+[ext_resource type="PackedScene" uid="uid://cr8wcalylntw3" path="res://scene/Tilesets/Pickable_Guns/pickable_410rifle.tscn" id="25_62t6b"]
+[ext_resource type="PackedScene" uid="uid://cqjbebpmb6b0j" path="res://scene/Tilesets/Pickable_Guns/pickable_aa12.tscn" id="26_20r5k"]
 
 [sub_resource type="Environment" id="Environment_t0p8o"]
 background_mode = 2
@@ -218,3 +220,30 @@ position = Vector2(-3697, -6029)
 stream = ExtResource("24_h01qb")
 volume_db = -10.0
 autoplay = true
+
+[node name="Pickable_Rifle" parent="AudioStreamPlayer" instance=ExtResource("25_62t6b")]
+position = Vector2(3051, -329)
+
+[node name="Pickable_Rifle2" parent="AudioStreamPlayer" instance=ExtResource("25_62t6b")]
+position = Vector2(3439, -464)
+
+[node name="Pickable_Sniper" parent="AudioStreamPlayer" instance=ExtResource("6_tm2hb")]
+position = Vector2(3439, -464)
+
+[node name="Pickable_AA" parent="AudioStreamPlayer" instance=ExtResource("26_20r5k")]
+position = Vector2(2809, -518)
+
+[node name="Pickable_DMR2" parent="." instance=ExtResource("5_5jbah")]
+position = Vector2(4444, -553)
+
+[node name="Pickable_Minigun2" parent="." instance=ExtResource("7_fqej7")]
+position = Vector2(5086, -400)
+
+[node name="Pickable_RocketLauncher2" parent="." instance=ExtResource("8_noh41")]
+position = Vector2(4077, -137)
+
+[node name="Pickable_Shotgun2" parent="." instance=ExtResource("3_6i451")]
+position = Vector2(4747, -201)
+
+[node name="Pickable_Uzi" parent="." instance=ExtResource("4_hj0lp")]
+position = Vector2(5371, -543)
