@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3bx8erap6rvr"]
+
+[ext_resource type="Script" path="res://script/Guns/PickableWeapon_Template.gd" id="1_sjnuq"]
+[ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="2_j8yb2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ia3r8"]
+
+[node name="PickableWeapon" type="Node2D"]
+script = ExtResource("1_sjnuq")
+
+[node name="Gun_Template" parent="." instance=ExtResource("2_j8yb2")]
+
+[node name="PickupArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea2D"]
+shape = SubResource("CircleShape2D_ia3r8")
+
+[connection signal="area_entered" from="PickupArea2D" to="." method="_on_pickup_area_2d_area_entered"]
+[connection signal="body_entered" from="PickupArea2D" to="." method="_on_pickup_area_2d_body_entered"]
+[connection signal="body_exited" from="PickupArea2D" to="." method="_on_pickup_area_2d_body_exited"]

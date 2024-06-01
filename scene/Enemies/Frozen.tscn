@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs2ygeosbf7dr"]
 
 [ext_resource type="Script" path="res://script/Enemies/Frozen.gd" id="1_151xw"]
-[ext_resource type="Texture2D" uid="uid://cvlwropp58jic" path="res://Sprites/Enemies/frozen.png" id="2_3q2an"]
+[ext_resource type="Texture2D" uid="uid://cl8yneswwb7uj" path="res://Sprites/Enemies/frozen.png" id="2_3q2an"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y31qs"]
 size = Vector2(64, 68)

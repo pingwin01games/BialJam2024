@@ -9,5 +9,6 @@ func _ready():
 func hit(val):
 	hp -= val
 	if hp <= 0:
-		daddy.childHasBeenKilled()
+		if daddy != null:
+			daddy.childHasBeenKilled()
 		queue_free()
