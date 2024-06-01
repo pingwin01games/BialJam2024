@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4yjlqau72slv"]
 
-[ext_resource type="PackedScene" uid="uid://d0at3br32a6al" path="res://scene/Enemies/Faceshredder.tscn" id="1_qn850"]
-[ext_resource type="Texture2D" uid="uid://d3lubpcxvm8xr" path="res://Sprites/Enemies/slime.png" id="2_25lgn"]
+[ext_resource type="PackedScene" uid="uid://d0at3br32a6al" path="res://scene/Enemies/faceshredder.tscn" id="1_qn850"]
+[ext_resource type="Texture2D" uid="uid://lry07xx3i8hg" path="res://Sprites/Enemies/slime.png" id="2_25lgn"]
 [ext_resource type="Script" path="res://script/Enemies/Slime.gd" id="2_vroa4"]
 
 [node name="Slime" instance=ExtResource("1_qn850")]

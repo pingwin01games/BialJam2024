@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var minesROF = $Mines_ROF
 @onready var mineScene :PackedScene = preload("res://scene/Enemies/slime.tscn")
 
-var curHP = 1000.0
-var maxHP = 1000.0
+var curHP = 150
+var maxHP = 150
 var player
 
 var mine

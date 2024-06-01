@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://ccdjq2c565lkd" path="res://Sprites/Tilesets/wnetrze.tres" id="1_mpms4"]
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="2_tibwo"]
-[ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="3_lp1vm"]
+[ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Tilesets/Pickable_Guns/pickable_rocketrlaucher.tscn" id="3_lp1vm"]
 [ext_resource type="PackedScene" uid="uid://b3lsuhwnx75yh" path="res://scene/Enemies/Slime_Generator.tscn" id="4_w5sdj"]
 
 [node name="Mapa_Test" type="Node2D"]
