@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://2nltocm5npa1"]
+[gd_scene load_steps=5 format=3 uid="uid://2nltocm5npa1"]
 
 [ext_resource type="TileSet" uid="uid://ccdjq2c565lkd" path="res://Sprites/Tilesets/wnetrze.tres" id="1_mpms4"]
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="2_tibwo"]
+[ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="3_lp1vm"]
+[ext_resource type="PackedScene" uid="uid://b3lsuhwnx75yh" path="res://scene/Enemies/Slime_Generator.tscn" id="4_w5sdj"]
 
 [node name="Mapa_Test" type="Node2D"]
 
@@ -14,3 +16,9 @@ layer_0/tile_data = PackedInt32Array(65538, 65536, 1, 131074, 65536, 2, 131075, 
 position = Vector2(139, 119)
 
 [node name="Bullet_Spawn" type="Node2D" parent="." groups=["projectiles"]]
+
+[node name="Pickable_RocketLauncher" parent="." instance=ExtResource("3_lp1vm")]
+position = Vector2(608, -70)
+
+[node name="Slime_Generator" parent="." instance=ExtResource("4_w5sdj")]
+position = Vector2(1157, 720)

@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3u5hrwwpl0ls"]
+[gd_scene load_steps=7 format=3 uid="uid://cx7c7f87r337w"]
 
-[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/Guns/projectiles/bullet_template.tscn" id="1_ajptq"]
+[ext_resource type="PackedScene" uid="uid://dpk1jxflfnoxr" path="res://scene/Guns/projectiles/bullet_template.tscn" id="1_ajptq"]
 [ext_resource type="Script" path="res://script/Projectiles/rocket_projectile.gd" id="2_cujrm"]
-[ext_resource type="Texture2D" uid="uid://bkya8ttwxn8a1" path="res://Sprites/Projectiles/rakieta.png" id="3_my5xc"]
+[ext_resource type="Texture2D" uid="uid://cs8pya4by2gh6" path="res://Sprites/Projectiles/rakieta.png" id="3_my5xc"]
 
 [sub_resource type="Curve" id="Curve_umorw"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.766667, 0.164835), 0.0, 0.0, 0, 0, Vector2(1, 0.043956), 0.0, 0.0, 0, 0]
@@ -21,7 +21,6 @@ scale_curve = SubResource("CurveTexture_hyd0x")
 color = Color(1.5, 1.5, 1.5, 1)
 
 [node name="Rocket_Projectile" instance=ExtResource("1_ajptq")]
-scale = Vector2(3, 3)
 script = ExtResource("2_cujrm")
 
 [node name="Sprite2D" parent="." index="0"]

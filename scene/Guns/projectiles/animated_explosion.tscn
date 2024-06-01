@@ -1,0 +1,116 @@
+[gd_scene load_steps=18 format=3 uid="uid://bgnljdfackj8u"]
+
+[ext_resource type="Texture2D" uid="uid://b1ddqqvchwe2u" path="res://Sprites/Projectiles/mzzl_flash2-Sheet.png" id="1_isykq"]
+[ext_resource type="Script" path="res://scene/Guns/projectiles/Animation_Of_Explosion.gd" id="2_lhsxq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbdir"]
+atlas = ExtResource("1_isykq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuk7j"]
+atlas = ExtResource("1_isykq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iodvk"]
+atlas = ExtResource("1_isykq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7b4i"]
+atlas = ExtResource("1_isykq")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8tfi"]
+atlas = ExtResource("1_isykq")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qahya"]
+atlas = ExtResource("1_isykq")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tqyy"]
+atlas = ExtResource("1_isykq")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_476qq"]
+atlas = ExtResource("1_isykq")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ldrm"]
+atlas = ExtResource("1_isykq")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b6vl"]
+atlas = ExtResource("1_isykq")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohcpv"]
+atlas = ExtResource("1_isykq")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb8w1"]
+atlas = ExtResource("1_isykq")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nppqm"]
+atlas = ExtResource("1_isykq")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2f6c"]
+atlas = ExtResource("1_isykq")
+region = Rect2(832, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okukj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbdir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuk7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iodvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7b4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8tfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qahya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tqyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_476qq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ldrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b6vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohcpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb8w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nppqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2f6c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_okukj")
+script = ExtResource("2_lhsxq")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dl04o1espvplg"]
+[gd_scene load_steps=13 format=3 uid="uid://b3lsuhwnx75yh"]
 
 [ext_resource type="Script" path="res://script/Enemies/Slime_Generator.gd" id="1_jqu6c"]
-[ext_resource type="Texture2D" uid="uid://dl547nfysjpq3" path="res://Sprites/Enemies/GeneratorSslime.png" id="2_fug5r"]
+[ext_resource type="Texture2D" uid="uid://blpkfoxtbaat5" path="res://Sprites/Enemies/GeneratorSslime.png" id="2_fug5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itlkr"]
 size = Vector2(57, 61)
