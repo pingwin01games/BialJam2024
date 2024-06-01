@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://dl04o1espvplg"]
+
+[ext_resource type="Script" path="res://script/Enemies/Slime_Generator.gd" id="1_jqu6c"]
+[ext_resource type="Texture2D" uid="uid://dl547nfysjpq3" path="res://Sprites/Enemies/GeneratorSslime.png" id="2_fug5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itlkr"]
+size = Vector2(57, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oemv"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1skui"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c41pm"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4a1g"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8x8b"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21ikw"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nglje"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0ay0"]
+atlas = ExtResource("2_fug5r")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47m7d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7oemv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1skui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c41pm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4a1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8x8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21ikw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nglje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0ay0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Slime_Generator" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 31
+script = ExtResource("1_jqu6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_itlkr")
+
+[node name="Shooting_Position" type="Marker2D" parent="."]
+position = Vector2(0, 113)
+
+[node name="Mines_ROF" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_47m7d")
+autoplay = "default"
+frame_progress = 0.936308
+
+[connection signal="timeout" from="Mines_ROF" to="." method="_on_mines_rof_timeout"]

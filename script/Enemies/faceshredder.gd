@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 200
 
 var hp = 100
-var dmg = 5
+var dmg = 30
 
 var playerPos : Vector2 = Vector2.ZERO
 var movementDirection : Vector2 = Vector2.ZERO
@@ -32,7 +32,6 @@ func hit(val):
 	hp -= val
 	if hp <= 0:
 		queue_free()
-		
 
 func _on_attack_area_body_entered(body):
 	target = body

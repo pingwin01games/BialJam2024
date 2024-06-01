@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4yjlqau72slv"]
+[gd_scene load_steps=4 format=3 uid="uid://b4yjlqau72slv"]
 
-[ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_aitsn"]
-[ext_resource type="Texture2D" uid="uid://d3lubpcxvm8xr" path="res://Sprites/Enemies/slime.png" id="2_gi5f3"]
+[ext_resource type="PackedScene" uid="uid://d0at3br32a6al" path="res://scene/Enemies/Faceshredder.tscn" id="1_qn850"]
+[ext_resource type="Texture2D" uid="uid://d3lubpcxvm8xr" path="res://Sprites/Enemies/slime.png" id="2_25lgn"]
+[ext_resource type="Script" path="res://script/Enemies/Slime.gd" id="2_vroa4"]
 
-[node name="Slime" instance=ExtResource("1_aitsn")]
+[node name="Slime" instance=ExtResource("1_qn850")]
+collision_mask = 27
+script = ExtResource("2_vroa4")
 
 [node name="Sprite2D" parent="." index="1"]
-scale = Vector2(2, 2)
-texture = ExtResource("2_gi5f3")
+texture = ExtResource("2_25lgn")

@@ -3,7 +3,7 @@ extends CharacterBody2D
 var player
 @onready var shooting_pos = $Shooting_Pos
 @onready var rof = $ROF
-@onready var projectileScene = preload("res://scene/bullet_template.tscn")
+@onready var projectileScene = preload("res://scene/Guns/projectiles/bullet_template.tscn")
 
 var dmg = 5
 var canShoot = true

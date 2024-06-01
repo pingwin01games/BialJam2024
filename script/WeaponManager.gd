@@ -76,6 +76,11 @@ func _process(delta):
 		elif reload_bar.modulate == Color(1,1,1) and reload.time_left != 1:
 			reload_bar.modulate = Color(1,0,0)
 			failBonusReloading = true
+			
+	if rotation_degrees < 90 and rotation_degrees > -90:
+		get_child(0).Flip(false)
+	else:
+		get_child(0).Flip(true)
 
 
 func _on_reload_time_timeout():

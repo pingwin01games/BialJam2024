@@ -4,6 +4,7 @@ extends Node2D
 @onready var gunPos = $Gun_Point
 @onready var ROF = $ROF
 @onready var audio_shot = $Audio_Shot
+@onready var gun_sprite = $Gun_Sprite
 
 
 var canShoot = true
@@ -63,6 +64,9 @@ func get_info(co):
 			return curMag
 		"MAX":
 			return maxAmmo
+
+func Flip(horizontal):
+	gun_sprite.flip_v = horizontal
 
 func _on_rof_timeout():
 	canShoot = true # Replace with function body.

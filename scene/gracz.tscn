@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://don334ykj1ehi"]
 
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
+[ext_resource type="PackedScene" uid="uid://dhs53850qfmlr" path="res://scene/Guns/410rifle.tscn" id="3_g6yus"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
-[ext_resource type="PackedScene" uid="uid://dfy4n1t24oort" path="res://scene/Guns/rocket_launcher.tscn" id="3_tko60"]
 [ext_resource type="Texture2D" uid="uid://nh1sflbvf35j" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
 [ext_resource type="Texture2D" uid="uid://ccwh3n60l2782" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
 [ext_resource type="Texture2D" uid="uid://ch3xvvhgqvy76" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
@@ -65,7 +65,7 @@ wait_time = 2.0
 position = Vector2(20, 0)
 script = ExtResource("3_s1mo5")
 
-[node name="Rocket_Launcher" parent="hand" instance=ExtResource("3_tko60")]
+[node name="Gun_Template" parent="hand" instance=ExtResource("3_g6yus")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

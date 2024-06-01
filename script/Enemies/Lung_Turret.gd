@@ -9,6 +9,10 @@ var player
 var dmg = 5
 var canShoot = true
 var playerInRange = false
+var daddy
+
+var curHP = 25
+var maxHP = 25
 
 func _ready():
 	player = get_tree().get_first_node_in_group("player")
@@ -35,6 +39,11 @@ func _on_player_detector_body_exited(body):
 	playerInRange = false
 	animated_sprite_2d.play_backwards("default")
 
+func hit(val):
+	curHP -= val
+	if curHP<=0:
+		daddy.childHasBeenKilled()
+		queue_free()
 
 func _on_player_detector_body_entered(body):
 	playerInRange = true
