@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
 [ext_resource type="PackedScene" uid="uid://dhs53850qfmlr" path="res://scene/Guns/410rifle.tscn" id="3_g6yus"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
-[ext_resource type="Texture2D" uid="uid://nh1sflbvf35j" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
-[ext_resource type="Texture2D" uid="uid://ccwh3n60l2782" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
-[ext_resource type="Texture2D" uid="uid://ch3xvvhgqvy76" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
-[ext_resource type="Texture2D" uid="uid://dn5mf0sykbuki" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
-[ext_resource type="Texture2D" uid="uid://41bqvl687vky" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
-[ext_resource type="Texture2D" uid="uid://b6n0uf13kuwwf" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
-[ext_resource type="AudioStream" uid="uid://bahy71l8lkeua" path="res://audio/weapons/windup.wav" id="10_vaags"]
+[ext_resource type="Texture2D" uid="uid://ce0i3h1wcu3k8" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
+[ext_resource type="Texture2D" uid="uid://cy8ourctiuqwh" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
+[ext_resource type="Texture2D" uid="uid://k4vypc8i4jcg" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
+[ext_resource type="Texture2D" uid="uid://cnahha6lbs2a1" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
+[ext_resource type="Texture2D" uid="uid://dk2hcxgweglor" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
+[ext_resource type="Texture2D" uid="uid://cd21nheqyf6nm" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
+[ext_resource type="AudioStream" uid="uid://c1f5evaqjbco" path="res://audio/weapons/windup.wav" id="10_vaags"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
 size = Vector2(41, 73)
@@ -41,7 +41,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-collision_mask = 5
+collision_mask = 14
 motion_mode = 1
 script = ExtResource("1_d3427")
 
@@ -62,6 +62,7 @@ position_smoothing_enabled = true
 wait_time = 2.0
 
 [node name="hand" type="Node2D" parent="."]
+z_index = 2
 position = Vector2(20, 0)
 script = ExtResource("3_s1mo5")
 
@@ -178,6 +179,7 @@ horizontal_alignment = 1
 vertical_alignment = 2
 
 [node name="Walking_Cycle" type="AnimatedSprite2D" parent="."]
+z_index = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_bqahn")
 autoplay = "default"
