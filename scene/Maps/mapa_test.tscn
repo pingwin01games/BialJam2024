@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2nltocm5npa1"]
 
-[ext_resource type="TileSet" uid="uid://b4ery8ek4cbsh" path="res://Sprites/Tilesets/wnetrze.tres" id="1_mpms4"]
+[ext_resource type="TileSet" uid="uid://ccdjq2c565lkd" path="res://Sprites/Tilesets/wnetrze.tres" id="1_mpms4"]
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="2_tibwo"]
 
 [node name="Mapa_Test" type="Node2D"]
@@ -12,3 +12,5 @@ layer_0/tile_data = PackedInt32Array(65538, 65536, 1, 131074, 65536, 2, 131075, 
 
 [node name="Player" parent="." instance=ExtResource("2_tibwo")]
 position = Vector2(139, 119)
+
+[node name="Bullet_Spawn" type="Node2D" parent="." groups=["projectiles"]]
