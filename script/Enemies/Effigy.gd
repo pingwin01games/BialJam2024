@@ -12,6 +12,7 @@ var movementDirection : Vector2 = Vector2.ZERO
 @onready var exploding_timer = $"Exploding timer"
 @onready var explosion_sprite = $ExplosionSprite
 @onready var sprite_2d = $Sprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 @onready var dmg_area = $Dmg_Area
 
@@ -43,21 +44,24 @@ func hit(val):
 		
 
 func StartExploding():
-	#exploding animation duh
-	exploding_timer.start()
+	sprite_2d.visible = false
+	animated_sprite_2d.visible = true
+	animated_sprite_2d.play("default")
 
 func explode():
 	sprite_2d.visible = false
 	explosion_sprite.visible = true
+	animated_sprite_2d.visible = false
 	explosion_sprite.play("default")
 	for body in dmg_area.get_overlapping_bodies():
 		if body.has_method("hit"):
 			body.hit(dmg)
 
-#podmienic na on_exploding_animation_timeout
-func _on_exploding_timer_timeout():
-	explode()
 
 
 func _on_explosion_sprite_animation_finished():
 	queue_free()
+
+
+func _on_animated_sprite_2d_animation_finished():
+	explode()

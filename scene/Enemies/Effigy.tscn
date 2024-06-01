@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dbarg7blmgk66"]
+[gd_scene load_steps=36 format=3 uid="uid://dbarg7blmgk66"]
 
 [ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_4q1a4"]
 [ext_resource type="Script" path="res://script/Enemies/Effigy.gd" id="2_xef4y"]
 [ext_resource type="Texture2D" uid="uid://dq7o8dvrcq1pn" path="res://Sprites/Enemies/effigy.png" id="3_qx7t0"]
 [ext_resource type="Texture2D" uid="uid://dmh5kkuoxp4i5" path="res://Sprites/Projectiles/mzzl_flash2-Sheet.png" id="4_prlu5"]
+[ext_resource type="Texture2D" uid="uid://dg5r36gnnjun4" path="res://Sprites/Enemies/EffigyExplosion.png" id="5_3nbc8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r80eo"]
 radius = 107.87
@@ -114,11 +115,110 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7b24d"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xen0"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvdt2"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owxjy"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uarqm"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv8e0"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mitn8"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dx6i"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjp5s"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ios1n"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sao4b"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4b8o"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hrql"]
+atlas = ExtResource("5_3nbc8")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvlqk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7b24d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xen0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvdt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owxjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uarqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv8e0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mitn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dx6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjp5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ios1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sao4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4b8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hrql")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
 [node name="Effigy" instance=ExtResource("1_4q1a4")]
 script = ExtResource("2_xef4y")
 
 [node name="Sprite2D" parent="." index="1"]
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_qx7t0")
 
 [node name="Dmg_Area" type="Area2D" parent="." index="4"]
@@ -127,13 +227,19 @@ texture = ExtResource("3_qx7t0")
 shape = SubResource("CircleShape2D_r80eo")
 debug_color = Color(0.983262, 0, 0.354663, 0.42)
 
-[node name="Exploding timer" type="Timer" parent="." index="5"]
-
-[node name="ExplosionSprite" type="AnimatedSprite2D" parent="." index="6"]
+[node name="ExplosionSprite" type="AnimatedSprite2D" parent="." index="5"]
+visible = false
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_6ugq1")
 frame = 13
 frame_progress = 1.0
 
-[connection signal="timeout" from="Exploding timer" to="." method="_on_exploding_timer_timeout"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="6"]
+visible = false
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_mvlqk")
+frame = 12
+frame_progress = 1.0
+
 [connection signal="animation_finished" from="ExplosionSprite" to="." method="_on_explosion_sprite_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

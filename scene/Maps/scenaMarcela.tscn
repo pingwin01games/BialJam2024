@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmmt8x7gpus51"]
+[gd_scene load_steps=11 format=3 uid="uid://bmmt8x7gpus51"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
+[ext_resource type="PackedScene" uid="uid://dbarg7blmgk66" path="res://scene/Enemies/Effigy.tscn" id="2_t66xd"]
 [ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="3_5skuu"]
 [ext_resource type="PackedScene" uid="uid://cr8wcalylntw3" path="res://scene/Pickable_Guns/pickable_410rifle.tscn" id="3_blj7n"]
 [ext_resource type="PackedScene" uid="uid://b6oag0evfwydf" path="res://scene/Pickable_Guns/pickable_959jdj.tscn" id="4_o17lq"]
@@ -39,3 +40,6 @@ position = Vector2(216, -103)
 position = Vector2(-171, 163)
 
 [node name="Pickable_Uzi" parent="." instance=ExtResource("9_rdwog")]
+
+[node name="Effigy" parent="." instance=ExtResource("2_t66xd")]
+position = Vector2(890, 29)
