@@ -21,6 +21,7 @@ scale_curve = SubResource("CurveTexture_hyd0x")
 color = Color(1.5, 1.5, 1.5, 1)
 
 [node name="Rocket_Projectile" instance=ExtResource("1_ajptq")]
+scale = Vector2(3, 3)
 script = ExtResource("2_cujrm")
 
 [node name="Sprite2D" parent="." index="0"]

@@ -9,6 +9,7 @@ size = Vector2(5, 2)
 
 [node name="Bullet" instance=ExtResource("1_dpioi")]
 rotation = -0.785398
+scale = Vector2(4, 4)
 script = ExtResource("2_bkr0v")
 
 [node name="Sprite2D" parent="." index="0"]

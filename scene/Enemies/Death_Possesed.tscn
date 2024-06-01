@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c0nb01gm5ngc" path="res://Sprites/Enemies/DeathPosseded1.png" id="2_3xc5a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_23uww"]
-radius = 80.8084
+radius = 36.0139
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4hkd8"]
 atlas = ExtResource("2_3xc5a")

@@ -24,7 +24,7 @@ grow_vertical = 2
 bbcode_enabled = true
 text = "[center]Asset Liquidator
 
-Jakub \"Muraś Murawski\" - Graphic
+Jakub \"Muraś\" Murawski - Graphic
 Dominik Zabielski - Graphic
 Marcel Herman - Programmer
 Michał \"Wróbel\" Wróblewski - Programmer
@@ -32,3 +32,13 @@ Michał \"Wróbel\" Wróblewski - Programmer
 Thank you for playing!"
 fit_content = true
 scroll_active = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.396078, 0, 0.607843)

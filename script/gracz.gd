@@ -117,10 +117,12 @@ func hit(val):
 		get_tree().reload_current_scene()
 
 func BossInRange():
+	boss_name_tag.visible=true
 	boss_hp_bar.visible=true
 
 func BossOutRange():
 	boss_hp_bar.visible=false
+	boss_name_tag.visible=false
 
 func BossHpUpdate(curhp,maxhp):
 	boss_hp_bar.value = curhp/maxhp
