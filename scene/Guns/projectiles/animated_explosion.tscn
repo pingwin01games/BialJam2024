@@ -104,9 +104,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n2f6c")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]

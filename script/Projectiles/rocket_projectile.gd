@@ -19,7 +19,7 @@ func _on_area_of_damage_body_entered(body):
 	else:
 		return 0
 	var animation_of_explosion_inst = animation_of_explosion.instantiate()
-	animation_of_explosion_inst.position = position
+	animation_of_explosion_inst.position = global_position
 	var projectiles = get_tree().get_first_node_in_group("projectiles")
 	projectiles.add_child(animation_of_explosion_inst)
 	
