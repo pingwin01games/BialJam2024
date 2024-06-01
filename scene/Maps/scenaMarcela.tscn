@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmmt8x7gpus51"]
+[gd_scene load_steps=10 format=3 uid="uid://bmmt8x7gpus51"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
-[ext_resource type="PackedScene" uid="uid://cschdhlx3u7wl" path="res://scene/Enemies/Death_Possesed.tscn" id="2_06xnr"]
 [ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="3_5skuu"]
+[ext_resource type="PackedScene" uid="uid://cr8wcalylntw3" path="res://scene/Pickable_Guns/pickable_410rifle.tscn" id="3_blj7n"]
+[ext_resource type="PackedScene" uid="uid://b6oag0evfwydf" path="res://scene/Pickable_Guns/pickable_959jdj.tscn" id="4_o17lq"]
+[ext_resource type="PackedScene" uid="uid://cqjbebpmb6b0j" path="res://scene/Pickable_Guns/pickable_aa12.tscn" id="5_6mbi6"]
+[ext_resource type="PackedScene" uid="uid://ddrvkqexqon5f" path="res://scene/Pickable_Guns/pickable_dmr.tscn" id="6_ompd2"]
+[ext_resource type="PackedScene" uid="uid://n4h201l8kglq" path="res://scene/Pickable_Guns/pickable_minigun.tscn" id="7_k67tu"]
+[ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Pickable_Guns/pickable_shootgun.tscn" id="8_47g61"]
+[ext_resource type="PackedScene" uid="uid://bkm3dtvk1uueo" path="res://scene/Pickable_Guns/pickable_uzi_akimbo.tscn" id="9_rdwog"]
 
 [node name="ScenaMarcela" type="Node2D"]
 
@@ -14,4 +20,22 @@ position = Vector2(214, 3)
 [node name="Pickable_RocketLauncher" parent="." instance=ExtResource("3_5skuu")]
 position = Vector2(-176, 75)
 
-[node name="Death_Possesed" parent="." instance=ExtResource("2_06xnr")]
+[node name="Pickable_Rifle" parent="." instance=ExtResource("3_blj7n")]
+position = Vector2(1, -78)
+
+[node name="Pickable_Sniper" parent="." instance=ExtResource("4_o17lq")]
+position = Vector2(-6, 129)
+
+[node name="Pickable_AA" parent="." instance=ExtResource("5_6mbi6")]
+position = Vector2(-173, -48)
+
+[node name="Pickable_DMR" parent="." instance=ExtResource("6_ompd2")]
+position = Vector2(245, 130)
+
+[node name="Pickable_Minigun" parent="." instance=ExtResource("7_k67tu")]
+position = Vector2(216, -103)
+
+[node name="Pickable_Shotgun" parent="." instance=ExtResource("8_47g61")]
+position = Vector2(-171, 163)
+
+[node name="Pickable_Uzi" parent="." instance=ExtResource("9_rdwog")]
