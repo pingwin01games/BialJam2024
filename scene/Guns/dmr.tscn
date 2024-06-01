@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_qdp5c"]
 [ext_resource type="Script" path="res://script/Guns/dmr_logic.gd" id="2_cxwj4"]
-[ext_resource type="Texture2D" uid="uid://cesr4e68b0m10" path="res://Sprites/Guns/dmr.png" id="2_nr54g"]
-[ext_resource type="AudioStream" uid="uid://bxqjdk72fbpvp" path="res://audio/weapons/410riflesound.wav" id="4_l86wc"]
+[ext_resource type="Texture2D" uid="uid://c81jqifxaudfv" path="res://Sprites/Guns/dmr.png" id="2_nr54g"]
+[ext_resource type="AudioStream" uid="uid://cbbj22mmnjf7r" path="res://audio/weapons/410riflesound.wav" id="4_l86wc"]
 
 [node name="Gun_Template" instance=ExtResource("1_qdp5c")]
 scale = Vector2(2, 2)

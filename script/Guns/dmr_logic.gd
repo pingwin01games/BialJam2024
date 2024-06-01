@@ -1,6 +1,6 @@
 extends "res://script/Guns/gun_template.gd"
 
-var sprite_weapon = load("res://Sprites/Hud/m202tohud-removebg-preview.png")
+var sprite_weapon = load("res://Sprites/Hud/sr25better.png")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	dmg = 50
