@@ -52,7 +52,7 @@ func get_hp():
 func hit(val):
 	hp -= val
 	playerObject.BossHpUpdate(hp,maxHP)
-	playerObject.BossName("S?#ke38?b")
+	playerObject.BossName("Anomaly-1083 \"S?#kee38?b\"")
 	if(hp<=0):
 		playerObject.BossOutRange()
 		get_tree().get_first_node_in_group("player").heal(100)
