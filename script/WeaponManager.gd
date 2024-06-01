@@ -27,6 +27,7 @@ func _ready():
 func _process(delta):
 	player.currentAmmo = currentAmmo
 	player.currentMag = currentMag
+	player.maxAmmo = maxAmmo
 	
 	if get_child(0) != null:
 		

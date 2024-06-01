@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4yjlqau72slv"]
 
-[ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/enemy_2.tscn" id="1_skdpu"]
-[ext_resource type="Texture2D" uid="uid://d3lubpcxvm8xr" path="res://Sprites/Enemies/slime.png" id="2_gw0l2"]
+[ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_aitsn"]
+[ext_resource type="Texture2D" uid="uid://d3lubpcxvm8xr" path="res://Sprites/Enemies/slime.png" id="2_gi5f3"]
 
-[node name="enemy2" instance=ExtResource("1_skdpu")]
+[node name="Slime" instance=ExtResource("1_aitsn")]
 
 [node name="Sprite2D" parent="." index="1"]
 scale = Vector2(2, 2)
-texture = ExtResource("2_gw0l2")
+texture = ExtResource("2_gi5f3")

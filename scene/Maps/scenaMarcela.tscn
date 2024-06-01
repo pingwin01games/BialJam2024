@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmmt8x7gpus51"]
+
+[ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
+[ext_resource type="PackedScene" uid="uid://ygyyfqhdluvw" path="res://scene/Enemies/Lungs.tscn" id="4_y52ju"]
+
+[node name="ScenaMarcela" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_xfj1p")]
+position = Vector2(214, 3)
+
+[node name="Node2D" type="Node2D" parent="." groups=["projectiles"]]
+
+[node name="Lungs" parent="." instance=ExtResource("4_y52ju")]
+position = Vector2(-945, 0)

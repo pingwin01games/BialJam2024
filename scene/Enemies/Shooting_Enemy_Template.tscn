@@ -1,24 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6cgk320vn85q"]
 
 [ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="1_7wpua"]
-[ext_resource type="Script" path="res://script/enemy_2.gd" id="1_l513w"]
+[ext_resource type="Script" path="res://script/Enemies/enemy_2.gd" id="1_l513w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y31qs"]
-size = Vector2(48, 66)
+size = Vector2(64, 68)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8vxg5"]
 radius = 1024.0
 
-[node name="enemy2" type="CharacterBody2D"]
+[node name="Shooting_Enemy_Template" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 31
+motion_mode = 1
 script = ExtResource("1_l513w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y31qs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.494118, 0.0313726, 1)
 texture = ExtResource("1_7wpua")
 
 [node name="Area_Of_Attack" type="Area2D" parent="."]

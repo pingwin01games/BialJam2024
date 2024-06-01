@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1wq5lryvvjl3"]
 
 [ext_resource type="PackedScene" uid="uid://dbrsi3jtottgr" path="res://scene/Guns/gun_template.tscn" id="1_enpfu"]
-[ext_resource type="Texture2D" uid="uid://xra1nwkrovks" path="res://Sprites/Guns/aa12.png" id="2_24v6i"]
-[ext_resource type="Script" path="res://scene/Guns/aa12_logic.gd" id="2_wk1kb"]
-[ext_resource type="AudioStream" uid="uid://dtg2emxlp6s7p" path="res://audio/weapons/shotgunsound.wav" id="4_aoqrc"]
+[ext_resource type="Texture2D" uid="uid://didbx0pgd8825" path="res://Sprites/Guns/aa12.png" id="2_24v6i"]
+[ext_resource type="Script" path="res://script/Guns/aa12_logic.gd" id="2_wk1kb"]
+[ext_resource type="AudioStream" uid="uid://c27vpckql0ugs" path="res://audio/weapons/shotgunsound.wav" id="4_aoqrc"]
 
 [node name="Gun_Template" instance=ExtResource("1_enpfu")]
 scale = Vector2(2, 2)

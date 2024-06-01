@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://ygyyfqhdluvw"]
+
+[ext_resource type="Script" path="res://script/Enemies/Lungs.gd" id="1_8ir6e"]
+[ext_resource type="Texture2D" uid="uid://bltcp0a7201ja" path="res://Sprites/Enemies/lungs.png" id="2_4am5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itlkr"]
+size = Vector2(223, 143)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkqk1"]
+radius = 769.0
+
+[node name="Lungs" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 31
+script = ExtResource("1_8ir6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_4am5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.5, -52.5)
+shape = SubResource("RectangleShape2D_itlkr")
+
+[node name="Shooting_Position" type="Marker2D" parent="."]
+position = Vector2(0, 113)
+
+[node name="Mines_ROF" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+shape = SubResource("CircleShape2D_fkqk1")
+debug_color = Color(0, 0.622677, 0.544081, 0.42)
+
+[connection signal="timeout" from="Mines_ROF" to="." method="_on_mines_rof_timeout"]
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_exited" from="PlayerDetector" to="." method="_on_player_detector_body_exited"]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://c747iyidrjnl"]
 
-[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/bullet_template.tscn" id="1_6tmgr"]
-[ext_resource type="Texture2D" uid="uid://bryr4nlxsvtdm" path="res://Sprites/Projectiles/bullet.png" id="2_bj2yl"]
-[ext_resource type="Script" path="res://scene/Guns/projectiles/sniper_bullet.gd" id="2_el7e5"]
+[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/Guns/projectiles/bullet_template.tscn" id="1_prsxh"]
+[ext_resource type="Script" path="res://script/Projectiles/sniper_bullet.gd" id="2_3nt22"]
+[ext_resource type="Texture2D" uid="uid://bah2yxq0a3x0t" path="res://Sprites/Projectiles/bullet.png" id="2_bj2yl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60gbd"]
 size = Vector2(781, 3)
 
-[node name="Bullet_Template" instance=ExtResource("1_6tmgr")]
-script = ExtResource("2_el7e5")
+[node name="Sniper_Bullet" instance=ExtResource("1_prsxh")]
+script = ExtResource("2_3nt22")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(512, 0)

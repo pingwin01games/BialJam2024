@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 50
+const SPEED = 200
 
 var hp = 100
 var dmg = 5
@@ -15,9 +15,10 @@ var canHit = true
 
 func _process(delta):
 	if target!=null and canHit == true:
-		target.hit(dmg)
-		canHit = false
-		rof.start()
+		if target.has_method("hit"):
+			target.hit(dmg)
+			canHit = false
+			rof.start()
 
 func _physics_process(delta):
 	playerPos = get_tree().get_first_node_in_group("player").position

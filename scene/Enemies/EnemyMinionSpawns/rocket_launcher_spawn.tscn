@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3k3wfqdj4d2s"]
 
-[ext_resource type="Script" path="res://script/Enemies/rocket_launcher_spawn.gd" id="1_f8lcv"]
+[ext_resource type="Script" path="res://script/Enemies/EnemyMinionsSpawn/rocket_launcher_spawn.gd" id="1_f8lcv"]
 [ext_resource type="Texture2D" uid="uid://dko6mq8rddper" path="res://Sprites/Guns/rckt202.png" id="2_njge2"]
 
 [node name="enem_weapon_spawn" type="CharacterBody2D"]

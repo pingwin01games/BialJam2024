@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://cn7xio8mktde8"]
 
-[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/bullet_template.tscn" id="1_17xxx"]
-[ext_resource type="Texture2D" uid="uid://d2boqh002yyu1" path="res://Sprites/Projectiles/saw.png" id="2_bwxgf"]
-[ext_resource type="Script" path="res://scene/Guns/projectiles/enemy_saw.gd" id="2_w8157"]
+[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/Guns/projectiles/bullet_template.tscn" id="1_l3f5h"]
+[ext_resource type="Script" path="res://script/Projectiles/enemy_saw.gd" id="2_3s0qy"]
+[ext_resource type="Texture2D" uid="uid://dofxy3njsxawf" path="res://Sprites/Projectiles/saw.png" id="2_bwxgf"]
 
-[node name="Bullet_Template" instance=ExtResource("1_17xxx")]
-script = ExtResource("2_w8157")
+[node name="Enemy_Saw" instance=ExtResource("1_l3f5h")]
+script = ExtResource("2_3s0qy")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(3, -1)

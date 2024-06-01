@@ -6,14 +6,16 @@ extends CharacterBody2D
 @onready var dodge_cooldown = $Dodge_Cooldown
 @onready var walking_cycle = $Walking_Cycle
 @onready var audio_dash = $Audio_dash
+@onready var boss_hp_bar = $CanvasLayer/UI/Boss_Hp_Bar
+@onready var hp_bar = $CanvasLayer/UI/Hp_Bar
 
 
 const SPEED = 300.0
 const DASH_SPEED = 500.0
-const MAXAMMO = 10
 
 var canShoot = true
 var currentAmmo = 0
+var maxAmmo = 10
 var currentMag = 0
 var reloading = false
 var bonusReloading = false
@@ -21,8 +23,8 @@ var failBonusReloading = false
 var dashing = false
 var canDash = true
 
-var maxHP = 100
-var curHP = 100
+var maxHP = 100.0
+var curHP = 100.0
 
 var startBonusReload = 0.3
 var starBonusReloadTime = 0.3
@@ -38,7 +40,7 @@ func _ready():
 func _process(delta):
 
 	
-	$CanvasLayer/UI/Ammo_Count.text = str(currentAmmo)+' / '+str(currentMag)
+	$CanvasLayer/UI/Ammo_Count.text = str(currentAmmo)+' / '+str(maxAmmo) +'\n'+"Mags: " + str(currentMag)
 	$CanvasLayer/UI/HP_Display.text = str(curHP)
 	
 	direction.x = Input.get_axis("ui_left", "ui_right")
@@ -108,6 +110,17 @@ func _on_dodge_cooldown_timeout():
 
 func hit(val):
 	curHP -= val
+	hp_bar.value = curHP/maxHP
 	print_debug(curHP)
 	if curHP <= 0:
 		get_tree().reload_current_scene()
+
+func BossInRange():
+	boss_hp_bar.visible=true
+
+func BossOutRange():
+	boss_hp_bar.visible=false
+
+func BossHpUpdate(curhp,maxhp):
+	
+	boss_hp_bar.value = curhp/maxhp

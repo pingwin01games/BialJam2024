@@ -13,7 +13,7 @@ var hp = 100
 var dmg = 10
 
 var player : Vector2 = Vector2.ZERO
-var kierunek_ruchu : Vector2 = Vector2.ZERO
+var movementDirection : Vector2 = Vector2.ZERO
 
 var canShoot = false
 var Shooting = false
@@ -22,13 +22,13 @@ func _process(delta):
 	
 	player = get_tree().get_first_node_in_group("player").position
 	
-	kierunek_ruchu = player - position
-	if kierunek_ruchu.length() > 256:
-		velocity = kierunek_ruchu.normalized() * SPEED
+	movementDirection = player - position
+	if movementDirection.length() > 256:
+		velocity = movementDirection.normalized() * SPEED
 		
 	else:
-		kierunek_ruchu = position - player
-		velocity = kierunek_ruchu.normalized() * RUN_SPEED
+		movementDirection = position - player
+		velocity = movementDirection.normalized() * RUN_SPEED
 	
 	if canShoot and not Shooting:
 		var projectile = projectileScene.instantiate()

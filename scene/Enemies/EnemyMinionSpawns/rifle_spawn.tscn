@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bu2ybgcnojnxf"]
 
-[ext_resource type="Script" path="res://scene/Enemies/rifle_spawn.gd" id="1_o1uf1"]
+[ext_resource type="Script" path="res://script/Enemies/EnemyMinionsSpawn/rifle_spawn.gd" id="1_o1uf1"]
 [ext_resource type="Texture2D" uid="uid://bkcct0yqflgmd" path="res://Sprites/Guns/410rifle.png" id="2_d1kfk"]
 
 [node name="rifle_spawn" type="CharacterBody2D"]

@@ -1,4 +1,4 @@
-extends "res://scene/Guns/gun_template.gd"
+extends "res://script/Guns/gun_template.gd"
 
 var sprite_weapon = load("res://Sprites/Hud/m202tohud-removebg-preview.png")
 
@@ -9,7 +9,7 @@ func _ready():
 	maxMag = 4
 	curMag = 4
 	distanceToGun = 32
-	projectileScene = preload("res://scene/Projectiles/rocket_projectile.tscn")
+	projectileScene = preload("res://scene/Guns/projectiles/rocket_projectile.tscn")
 
 func get_info(co):
 	match co:

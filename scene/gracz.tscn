@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://script/gracz.gd" id="1_d3427"]
 [ext_resource type="Script" path="res://script/WeaponManager.gd" id="3_s1mo5"]
 [ext_resource type="PackedScene" uid="uid://dfy4n1t24oort" path="res://scene/Guns/rocket_launcher.tscn" id="3_tko60"]
-[ext_resource type="Texture2D" uid="uid://ce0i3h1wcu3k8" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
-[ext_resource type="Texture2D" uid="uid://cy8ourctiuqwh" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
-[ext_resource type="Texture2D" uid="uid://k4vypc8i4jcg" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
-[ext_resource type="Texture2D" uid="uid://cnahha6lbs2a1" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
-[ext_resource type="Texture2D" uid="uid://dk2hcxgweglor" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
-[ext_resource type="Texture2D" uid="uid://cd21nheqyf6nm" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
-[ext_resource type="AudioStream" uid="uid://c1f5evaqjbco" path="res://audio/weapons/windup.wav" id="10_vaags"]
+[ext_resource type="Texture2D" uid="uid://nh1sflbvf35j" path="res://Sprites/Players/mc1.png" id="4_hlrhp"]
+[ext_resource type="Texture2D" uid="uid://ccwh3n60l2782" path="res://Sprites/Players/mc2.png" id="5_1j4c6"]
+[ext_resource type="Texture2D" uid="uid://ch3xvvhgqvy76" path="res://Sprites/Players/mc3.png" id="6_ujovt"]
+[ext_resource type="Texture2D" uid="uid://dn5mf0sykbuki" path="res://Sprites/Players/mc4.png" id="7_m3x4v"]
+[ext_resource type="Texture2D" uid="uid://41bqvl687vky" path="res://Sprites/Players/mc5.png" id="8_ppkw7"]
+[ext_resource type="Texture2D" uid="uid://b6n0uf13kuwwf" path="res://Sprites/Players/mc6.png" id="9_0hb2j"]
+[ext_resource type="AudioStream" uid="uid://bahy71l8lkeua" path="res://audio/weapons/windup.wav" id="10_vaags"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci8wv"]
 size = Vector2(41, 73)
@@ -79,12 +79,15 @@ offset_bottom = 324.0
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.036
-anchor_right = 1.03993
+anchor_left = 0.138431
+anchor_top = 1.81481
+anchor_right = 0.142361
+anchor_bottom = 1.81481
 offset_left = -39.736
 offset_bottom = 23.0
 grow_horizontal = 0
 text = "TEST"
+vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Reload_bar" type="ProgressBar" parent="CanvasLayer/UI"]
@@ -96,6 +99,39 @@ offset_top = 478.0
 offset_right = 637.0
 offset_bottom = 505.0
 max_value = 1.0
+show_percentage = false
+
+[node name="Hp_Bar" type="ProgressBar" parent="CanvasLayer/UI"]
+modulate = Color(0, 1, 0, 1)
+z_index = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 389.0
+offset_right = 135.0
+offset_bottom = 416.0
+scale = Vector2(1.86838, 1)
+max_value = 1.0
+value = 1.0
+show_percentage = false
+
+[node name="Boss_Hp_Bar" type="ProgressBar" parent="CanvasLayer/UI"]
+visible = false
+modulate = Color(1, 0, 0, 1)
+z_index = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 264.0
+offset_right = 115.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4.92, 1)
+max_value = 1.0
+value = 1.0
 show_percentage = false
 
 [node name="Can_Pick_Up" type="Label" parent="CanvasLayer/UI"]
@@ -125,9 +161,9 @@ anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 0.035
 anchor_bottom = 1.0
-offset_top = 227.0
+offset_top = 154.0
 offset_right = 218.84
-offset_bottom = 318.0
+offset_bottom = 245.0
 grow_vertical = 0
 
 [node name="Walking_Cycle" type="AnimatedSprite2D" parent="."]

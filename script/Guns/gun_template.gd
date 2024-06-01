@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var projectileScene : PackedScene = preload("res://scene/bullet_template.tscn")
+@onready var projectileScene : PackedScene = preload("res://scene/Guns/projectiles/bullet_template.tscn")
 @onready var gunPos = $Gun_Point
 @onready var ROF = $ROF
 @onready var audio_shot = $Audio_Shot
@@ -63,7 +63,6 @@ func get_info(co):
 			return curMag
 		"MAX":
 			return maxAmmo
-
 
 func _on_rof_timeout():
 	canShoot = true # Replace with function body.

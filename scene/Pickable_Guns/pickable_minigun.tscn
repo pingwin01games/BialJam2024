@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://n4h201l8kglq"]
 
-[ext_resource type="Script" path="res://script/Weapon/PickableWeapon_Template.gd" id="1_mympo"]
+[ext_resource type="Script" path="res://script/Guns/PickableWeapon_Template.gd" id="1_mympo"]
 [ext_resource type="PackedScene" uid="uid://fkuvt0m44q6k" path="res://scene/Guns/minigun.tscn" id="2_ui1ch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ia3r8"]
 
-[node name="PickableWeapon" type="Node2D"]
+[node name="Pickable_Minigun" type="Node2D"]
 script = ExtResource("1_mympo")
 
 [node name="Gun_Template" parent="." instance=ExtResource("2_ui1ch")]

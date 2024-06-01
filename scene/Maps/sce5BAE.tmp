@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmmt8x7gpus51"]
+[gd_scene load_steps=3 format=3 uid="uid://bmmt8x7gpus51"]
 
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_xfj1p"]
-[ext_resource type="PackedScene" uid="uid://dbarg7blmgk66" path="res://scene/Enemies/Effigy.tscn" id="2_xlwii"]
 [ext_resource type="PackedScene" uid="uid://bs2ygeosbf7dr" path="res://scene/Enemies/Frozen.tscn" id="3_la2gw"]
 
 [node name="ScenaMarcela" type="Node2D"]
@@ -11,7 +10,4 @@ position = Vector2(214, 3)
 
 [node name="Node2D" type="Node2D" parent="." groups=["projectiles"]]
 
-[node name="Effigy" parent="." instance=ExtResource("2_xlwii")]
-
 [node name="Frozen" parent="." instance=ExtResource("3_la2gw")]
-position = Vector2(940, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://cschdhlx3u7wl"]
 
-[ext_resource type="Script" path="res://script/Enemies/enemy_weapon_spawner.gd" id="1_3vo14"]
+[ext_resource type="Script" path="res://script/Enemies/Death_Possesed.gd" id="1_3vo14"]
 [ext_resource type="Texture2D" uid="uid://c0nb01gm5ngc" path="res://Sprites/Enemies/DeathPosseded1.png" id="2_3xc5a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_23uww"]

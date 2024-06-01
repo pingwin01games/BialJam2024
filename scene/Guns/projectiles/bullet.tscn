@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://bkvskqm0ypah1"]
 
-[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/bullet_template.tscn" id="1_rcjk7"]
-[ext_resource type="Texture2D" uid="uid://bryr4nlxsvtdm" path="res://Sprites/Projectiles/bullet.png" id="2_sscil"]
-[ext_resource type="Script" path="res://scene/Guns/projectiles/bullet_logic.gd" id="2_suej5"]
+[ext_resource type="PackedScene" uid="uid://d4pt4jdbqiin" path="res://scene/Guns/projectiles/bullet_template.tscn" id="1_dpioi"]
+[ext_resource type="Script" path="res://script/Projectiles/bullet_logic.gd" id="2_bkr0v"]
+[ext_resource type="Texture2D" uid="uid://bah2yxq0a3x0t" path="res://Sprites/Projectiles/bullet.png" id="2_sscil"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ga34s"]
 size = Vector2(5, 2)
 
-[node name="Bullet_Template" instance=ExtResource("1_rcjk7")]
+[node name="Bullet" instance=ExtResource("1_dpioi")]
 rotation = -0.785398
-script = ExtResource("2_suej5")
+script = ExtResource("2_bkr0v")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_sscil")

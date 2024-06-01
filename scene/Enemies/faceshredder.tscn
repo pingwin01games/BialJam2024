@@ -1,18 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0at3br32a6al"]
 
-[ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/enemy_2.tscn" id="1_0xmai"]
-[ext_resource type="Script" path="res://script/Enemies/faceshredder.gd" id="2_4lrdq"]
+[ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_0xmai"]
+[ext_resource type="Script" path="res://script/Enemies/Faceshredder.gd" id="2_4lrdq"]
 [ext_resource type="Texture2D" uid="uid://d4fj86erkxiw4" path="res://Sprites/Enemies/faceshredder.png" id="2_ym6ke"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5twe"]
 radius = 62.1289
 
 [node name="Faceshredder" instance=ExtResource("1_0xmai")]
-motion_mode = 1
 script = ExtResource("2_4lrdq")
 
 [node name="Sprite2D" parent="." index="1"]
-modulate = Color(1, 1, 1, 1)
 scale = Vector2(2, 2)
 texture = ExtResource("2_ym6ke")
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d4pt4jdbqiin"]
 
-[ext_resource type="Script" path="res://script/pila.gd" id="1_4ma07"]
-[ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="2_h3a6x"]
+[ext_resource type="Script" path="res://script/pila.gd" id="1_cuxmy"]
+[ext_resource type="Texture2D" uid="uid://cojaxssn6g72v" path="res://icon.svg" id="2_joa7t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkv4f"]
 size = Vector2(5, 2)
@@ -12,10 +12,10 @@ radius = 36.2215
 [node name="Bullet_Template" type="CharacterBody2D"]
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("1_4ma07")
+script = ExtResource("1_cuxmy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_h3a6x")
+texture = ExtResource("2_joa7t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jkv4f")

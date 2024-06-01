@@ -10,14 +10,16 @@ var canSuck : bool = false
 var SPEED = 100
 var RUN_SPEED = 200
 
+var hp = 75
+
 var player : Vector2 = Vector2.ZERO
 var movementDirection : Vector2 = Vector2.ZERO
 
 var weaponSpawnPos = Vector2(250,250)
 
 func _ready():
-	weaponsSpawnList.append(preload("res://scene/Enemies/rocket_launcher_spawn.tscn"))
-	weaponsSpawnList.append(preload("res://scene/Enemies/rifle_spawn.tscn"))
+	weaponsSpawnList.append(preload("res://scene/Enemies/EnemyMinionSpawns/rocket_launcher_spawn.tscn"))
+	weaponsSpawnList.append(preload("res://scene/Enemies/EnemyMinionSpawns/rifle_spawn.tscn"))
 
 func _process(delta):
 	if(canPlaceMine == true):
@@ -62,6 +64,10 @@ func OnDeath():
 func _on_spawner_rof_timeout():
 	canPlaceMine = true
 
+func hit(val):
+	hp -= val
+	if hp <= 0:
+		queue_free()	
 
 func _on_animated_sprite_2d_animation_finished():
 	queue_free()
