@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://424lhkxt6yv6"]
+[gd_scene load_steps=41 format=3 uid="uid://424lhkxt6yv6"]
 
 [ext_resource type="PackedScene" path="res://scene/Tilesets/tile_mapbydomi.tscn" id="1_cxxyd"]
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_jw8ry"]
@@ -26,6 +26,19 @@
 [ext_resource type="AudioStream" uid="uid://be0jh73k6teh1" path="res://audio/music/metal-dark-matter-111451 (1).mp3" id="24_h01qb"]
 [ext_resource type="PackedScene" uid="uid://cr8wcalylntw3" path="res://scene/Tilesets/Pickable_Guns/pickable_410rifle.tscn" id="25_62t6b"]
 [ext_resource type="PackedScene" uid="uid://cqjbebpmb6b0j" path="res://scene/Tilesets/Pickable_Guns/pickable_aa12.tscn" id="26_20r5k"]
+[ext_resource type="Texture2D" uid="uid://bcd31l0ookmwr" path="res://Sprites/Map Objects/flower1.png" id="27_f1ofj"]
+[ext_resource type="Texture2D" uid="uid://db8rd6v6eyn8u" path="res://Sprites/Map Objects/flower2.png" id="28_r6hbr"]
+[ext_resource type="Texture2D" uid="uid://d368me2qqjbyf" path="res://Sprites/Map Objects/flower3.png" id="29_t6tf2"]
+[ext_resource type="Texture2D" uid="uid://de7bi80tmige1" path="res://Sprites/Map Objects/hand.png" id="30_8fyof"]
+[ext_resource type="Texture2D" uid="uid://c10xi2jpxjn4e" path="res://Sprites/Map Objects/head.png" id="31_v5rya"]
+[ext_resource type="Texture2D" uid="uid://cqahisutm4xca" path="res://Sprites/Map Objects/legs.png" id="32_vsmen"]
+[ext_resource type="Texture2D" uid="uid://jgxoynjw3bqg" path="res://Sprites/Map Objects/locker.png" id="33_fbjev"]
+[ext_resource type="Texture2D" uid="uid://bnr1hobbmq0pd" path="res://Sprites/Map Objects/sofa1.png" id="34_g8ni4"]
+[ext_resource type="Texture2D" uid="uid://bnvlf01lvex6w" path="res://Sprites/Map Objects/sofa2.png" id="35_3pd5m"]
+[ext_resource type="Texture2D" uid="uid://u5ktr3328jaw" path="res://Sprites/Map Objects/table.png" id="36_kkx2q"]
+[ext_resource type="Texture2D" uid="uid://c0dykrj7r2okg" path="res://Sprites/Map Objects/vendingmachine.png" id="37_e400i"]
+[ext_resource type="Texture2D" uid="uid://ctdrlwl0smpp1" path="res://Sprites/Map Objects/vendingmachinebroken.png" id="38_fnqxh"]
+[ext_resource type="Texture2D" uid="uid://dgwt11gjnhass" path="res://Sprites/Map Objects/wpncrate.png" id="39_acujk"]
 
 [sub_resource type="Environment" id="Environment_t0p8o"]
 background_mode = 2
@@ -247,3 +260,103 @@ position = Vector2(4747, -201)
 
 [node name="Pickable_Uzi" parent="." instance=ExtResource("4_hj0lp")]
 position = Vector2(5371, -543)
+
+[node name="Flower1" type="Sprite2D" parent="."]
+position = Vector2(2954, -871)
+scale = Vector2(4, 4)
+texture = ExtResource("27_f1ofj")
+
+[node name="Flower2" type="Sprite2D" parent="."]
+position = Vector2(3150, -1101)
+scale = Vector2(4, 4)
+texture = ExtResource("28_r6hbr")
+
+[node name="Flower3" type="Sprite2D" parent="."]
+position = Vector2(4640, -896)
+scale = Vector2(4, 4)
+texture = ExtResource("29_t6tf2")
+
+[node name="Flower4" type="Sprite2D" parent="."]
+position = Vector2(5403, -926)
+scale = Vector2(4, 4)
+texture = ExtResource("28_r6hbr")
+
+[node name="Flower5" type="Sprite2D" parent="."]
+position = Vector2(5701, -1160)
+scale = Vector2(4, 4)
+texture = ExtResource("27_f1ofj")
+
+[node name="Hand" type="Sprite2D" parent="."]
+position = Vector2(3528, -2934)
+scale = Vector2(4, 4)
+texture = ExtResource("30_8fyof")
+
+[node name="Hand2" type="Sprite2D" parent="."]
+position = Vector2(5226, -2840)
+scale = Vector2(4, 4)
+texture = ExtResource("30_8fyof")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(3436, -2106)
+scale = Vector2(4, 4)
+texture = ExtResource("31_v5rya")
+
+[node name="Head2" type="Sprite2D" parent="."]
+position = Vector2(5638, -2192)
+scale = Vector2(4, 4)
+texture = ExtResource("31_v5rya")
+
+[node name="Legs" type="Sprite2D" parent="."]
+position = Vector2(2894, -5851)
+scale = Vector2(4, 4)
+texture = ExtResource("32_vsmen")
+
+[node name="Legs2" type="Sprite2D" parent="."]
+position = Vector2(5692, -5975)
+scale = Vector2(4, 4)
+texture = ExtResource("32_vsmen")
+
+[node name="Locker" type="Sprite2D" parent="."]
+position = Vector2(5797, -7320)
+scale = Vector2(4, 4)
+texture = ExtResource("33_fbjev")
+
+[node name="Locker2" type="Sprite2D" parent="."]
+position = Vector2(2732, -7395)
+scale = Vector2(4, 4)
+texture = ExtResource("33_fbjev")
+
+[node name="Sofa1" type="Sprite2D" parent="."]
+position = Vector2(1503, -9796)
+scale = Vector2(4, 4)
+texture = ExtResource("34_g8ni4")
+
+[node name="Sofa2" type="Sprite2D" parent="."]
+position = Vector2(9491, -9602)
+scale = Vector2(4, 4)
+texture = ExtResource("35_3pd5m")
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(9487, -9569)
+scale = Vector2(4, 4)
+texture = ExtResource("36_kkx2q")
+
+[node name="Vendingmachine" type="Sprite2D" parent="."]
+position = Vector2(-10, -7079)
+scale = Vector2(4, 4)
+texture = ExtResource("37_e400i")
+
+[node name="Vendingmachinebroken" type="Sprite2D" parent="."]
+position = Vector2(-2384, -5821)
+scale = Vector2(4, 4)
+texture = ExtResource("38_fnqxh")
+
+[node name="Wpncrate" type="Sprite2D" parent="."]
+position = Vector2(-3763, -7949)
+scale = Vector2(4, 4)
+texture = ExtResource("39_acujk")
+
+[node name="Wpncrate2" type="Sprite2D" parent="."]
+position = Vector2(-4162, -7967)
+scale = Vector2(4, 4)
+texture = ExtResource("39_acujk")
