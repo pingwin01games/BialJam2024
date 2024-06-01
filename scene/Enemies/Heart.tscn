@@ -104,7 +104,7 @@ position = Vector2(0, -52.5)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_kov66")
 autoplay = "default"
-frame_progress = 0.12604
+frame_progress = 0.193479
 
 [node name="Area_Of_Attack" type="Area2D" parent="."]
 

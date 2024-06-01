@@ -81,7 +81,7 @@ func _on_mines_rof_timeout():
 
 func _on_player_detector_body_entered(body):
 	player = body
-	player.BossName("H3?a#rt")
+	player.BossName("Anomaly-2137 \"H3@rt 0f 30r1d\"")
 	player.BossHpUpdate(curHP,maxHP)
 	body.BossInRange()
 

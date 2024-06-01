@@ -2,14 +2,14 @@ extends "res://script/Enemies/enemy_2.gd"
 
 @onready var walking_cycle = $Walking_Cycle
 
-var maxHP = 1000
+var maxHP = 1000.0
 
 var playerObject
 
 func _ready():
 	SPEED = 10
 	RUN_SPEED = 20
-	hp = 1000
+	hp = 1000.0
 	dmg = 10
 	projectileScene = preload("res://scene/Guns/projectiles/thing_projectile.tscn")
 	rof.wait_time = 0.5
@@ -55,6 +55,7 @@ func hit(val):
 	playerObject.BossName("S?#ke38?b")
 	if(hp<=0):
 		playerObject.BossOutRange()
+		get_tree().get_first_node_in_group("player").heal(100)
 		queue_free()
 
 func _on_player_detector_body_entered(body):

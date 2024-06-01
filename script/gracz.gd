@@ -109,6 +109,13 @@ func _on_dodge_cooldown_timeout():
 	canDash = true
 	dodge_cooldown.stop()
 
+func heal(value):
+	if curHP + value > maxHP:
+		curHP = maxHP
+	else :
+		curHP += value
+	hp_bar.value = curHP/maxHP
+
 func hit(val):
 	curHP -= val
 	hp_bar.value = curHP/maxHP

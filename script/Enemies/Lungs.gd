@@ -48,6 +48,7 @@ func hit(val):
 	player.BossHpUpdate(curHP,maxHP)
 	if(curHP<=0):
 		player.BossOutRange()
+		get_tree().get_first_node_in_group("player").heal(100)
 		queue_free()
 
 func _on_mines_rof_timeout():

@@ -31,6 +31,7 @@ func _physics_process(delta):
 func hit(val):
 	hp -= val
 	if hp <= 0:
+		get_tree().get_first_node_in_group("player").heal(10)
 		queue_free()
 
 func _on_attack_area_body_entered(body):
