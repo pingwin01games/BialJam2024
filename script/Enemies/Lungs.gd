@@ -26,7 +26,7 @@ func PlaceMine():
 	var newMine = mineScene.instantiate()
 	get_parent().add_child(newMine)
 	newMine.daddy = self
-
+	print(newMine.daddy)
 	
 	var rng = RandomNumberGenerator.new()
 	var rndX = rng.randi_range(-mineSpawnPos.x, mineSpawnPos.x)

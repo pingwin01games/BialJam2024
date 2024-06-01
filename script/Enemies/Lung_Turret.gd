@@ -42,6 +42,9 @@ func _on_player_detector_body_exited(body):
 func hit(val):
 	curHP -= val
 	if curHP<=0:
+		if daddy == null:
+			queue_free()
+			return 0
 		daddy.childHasBeenKilled()
 		queue_free()
 
