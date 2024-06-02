@@ -13,9 +13,10 @@ func _ready():
 	dmg = 10
 	projectileScene = preload("res://scene/Guns/projectiles/thing_projectile.tscn")
 	rof.wait_time = 0.5
+	playerObject = get_tree().get_first_node_in_group("player")
 
 func _process(delta):
-	
+	playerObject = get_tree().get_first_node_in_group("player")
 	walking_cycle.play("default")
 	
 	player = get_tree().get_first_node_in_group("player").position

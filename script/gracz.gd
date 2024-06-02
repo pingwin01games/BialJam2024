@@ -39,6 +39,8 @@ func _ready():
 
 
 func _process(delta):
+	if(Input.is_action_just_pressed("quit")):
+		get_tree().reload_current_scene()
 	
 	if curHP > maxAmmo:
 		curHP += 1*delta

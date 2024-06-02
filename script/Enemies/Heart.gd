@@ -29,7 +29,7 @@ func _process(delta):
 			canPlaceMine = false
 			curMineCount += 1
 			minesROF.start()
-	
+	player = get_tree().get_first_node_in_group("player")
 	if canShoot and not Shooting:
 		var projectile = projectileScene.instantiate()
 		var projectiles = get_tree().get_first_node_in_group("projectiles")

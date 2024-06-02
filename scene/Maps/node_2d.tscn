@@ -1,6 +1,6 @@
-[gd_scene load_steps=41 format=3 uid="uid://424lhkxt6yv6"]
+[gd_scene load_steps=36 format=3 uid="uid://ccg42vot4byuu"]
 
-[ext_resource type="PackedScene" path="res://scene/Tilesets/tile_mapbydomi.tscn" id="1_cxxyd"]
+[ext_resource type="PackedScene" uid="uid://cumetprwx54vu" path="res://scene/Tilesets/tile_mapbydomi.tscn" id="1_cxxyd"]
 [ext_resource type="PackedScene" uid="uid://don334ykj1ehi" path="res://scene/gracz.tscn" id="1_jw8ry"]
 [ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Tilesets/Pickable_Guns/pickable_shootgun.tscn" id="3_6i451"]
 [ext_resource type="PackedScene" uid="uid://bkm3dtvk1uueo" path="res://scene/Tilesets/Pickable_Guns/pickable_uzi_akimbo.tscn" id="4_hj0lp"]
@@ -10,35 +10,30 @@
 [ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Tilesets/Pickable_Guns/pickable_rocketrlaucher.tscn" id="8_noh41"]
 [ext_resource type="PackedScene" uid="uid://bs2ygeosbf7dr" path="res://scene/Enemies/Frozen.tscn" id="9_p3jm7"]
 [ext_resource type="PackedScene" uid="uid://b3lsuhwnx75yh" path="res://scene/Enemies/Slime_Generator.tscn" id="10_dw2mh"]
-[ext_resource type="PackedScene" uid="uid://d0at3br32a6al" path="res://scene/Enemies/faceshredder.tscn" id="11_qo01f"]
+[ext_resource type="PackedScene" uid="uid://d0at3br32a6al" path="res://scene/Enemies/Faceshredder.tscn" id="11_qo01f"]
 [ext_resource type="PackedScene" uid="uid://cschdhlx3u7wl" path="res://scene/Enemies/Death_Possesed.tscn" id="12_mkxq2"]
 [ext_resource type="PackedScene" uid="uid://dbarg7blmgk66" path="res://scene/Enemies/Effigy.tscn" id="13_8iayn"]
 [ext_resource type="PackedScene" uid="uid://de1ok1p7ph3sf" path="res://scene/Enemies/Skeeb.tscn" id="14_jt06g"]
 [ext_resource type="PackedScene" uid="uid://cketbs1nnfl34" path="res://scene/Enemies/Heart.tscn" id="15_u8rrp"]
-[ext_resource type="PackedScene" path="res://scene/Enemies/Lung_Turret.tscn" id="16_chhcl"]
-[ext_resource type="PackedScene" uid="uid://cr8wcalylntw3" path="res://scene/Pickable_Guns/pickable_410rifle.tscn" id="17_fk5ap"]
-[ext_resource type="PackedScene" uid="uid://b6oag0evfwydf" path="res://scene/Pickable_Guns/pickable_959jdj.tscn" id="18_ai2gf"]
-[ext_resource type="PackedScene" uid="uid://cqjbebpmb6b0j" path="res://scene/Pickable_Guns/pickable_aa12.tscn" id="19_a8w46"]
-[ext_resource type="PackedScene" uid="uid://ddrvkqexqon5f" path="res://scene/Pickable_Guns/pickable_dmr.tscn" id="20_h6ucy"]
-[ext_resource type="PackedScene" uid="uid://n4h201l8kglq" path="res://scene/Pickable_Guns/pickable_minigun.tscn" id="21_2ib2q"]
-[ext_resource type="PackedScene" uid="uid://drvhs40ay0qcl" path="res://scene/Pickable_Guns/pickable_rocketrlaucher.tscn" id="22_8j5x1"]
-[ext_resource type="PackedScene" uid="uid://cva5q5xsg2dcd" path="res://scene/Pickable_Guns/pickable_shootgun.tscn" id="23_4mwff"]
-[ext_resource type="AudioStream" uid="uid://be0jh73k6teh1" path="res://audio/music/metal-dark-matter-111451 (1).mp3" id="24_h01qb"]
+[ext_resource type="PackedScene" uid="uid://budtjno7ixio8" path="res://scene/Enemies/Lung_Turret.tscn" id="16_chhcl"]
+[ext_resource type="AudioStream" uid="uid://m4uxerk8ynjr" path="res://audio/music/metal-dark-matter-111451 (1).mp3" id="24_h01qb"]
 [ext_resource type="PackedScene" uid="uid://cr8wcalylntw3" path="res://scene/Tilesets/Pickable_Guns/pickable_410rifle.tscn" id="25_62t6b"]
 [ext_resource type="PackedScene" uid="uid://cqjbebpmb6b0j" path="res://scene/Tilesets/Pickable_Guns/pickable_aa12.tscn" id="26_20r5k"]
-[ext_resource type="Texture2D" uid="uid://bcd31l0ookmwr" path="res://Sprites/Map Objects/flower1.png" id="27_f1ofj"]
-[ext_resource type="Texture2D" uid="uid://db8rd6v6eyn8u" path="res://Sprites/Map Objects/flower2.png" id="28_r6hbr"]
-[ext_resource type="Texture2D" uid="uid://d368me2qqjbyf" path="res://Sprites/Map Objects/flower3.png" id="29_t6tf2"]
-[ext_resource type="Texture2D" uid="uid://de7bi80tmige1" path="res://Sprites/Map Objects/hand.png" id="30_8fyof"]
-[ext_resource type="Texture2D" uid="uid://c10xi2jpxjn4e" path="res://Sprites/Map Objects/head.png" id="31_v5rya"]
-[ext_resource type="Texture2D" uid="uid://cqahisutm4xca" path="res://Sprites/Map Objects/legs.png" id="32_vsmen"]
-[ext_resource type="Texture2D" uid="uid://jgxoynjw3bqg" path="res://Sprites/Map Objects/locker.png" id="33_fbjev"]
-[ext_resource type="Texture2D" uid="uid://bnr1hobbmq0pd" path="res://Sprites/Map Objects/sofa1.png" id="34_g8ni4"]
-[ext_resource type="Texture2D" uid="uid://bnvlf01lvex6w" path="res://Sprites/Map Objects/sofa2.png" id="35_3pd5m"]
-[ext_resource type="Texture2D" uid="uid://u5ktr3328jaw" path="res://Sprites/Map Objects/table.png" id="36_kkx2q"]
-[ext_resource type="Texture2D" uid="uid://c0dykrj7r2okg" path="res://Sprites/Map Objects/vendingmachine.png" id="37_e400i"]
-[ext_resource type="Texture2D" uid="uid://ctdrlwl0smpp1" path="res://Sprites/Map Objects/vendingmachinebroken.png" id="38_fnqxh"]
-[ext_resource type="Texture2D" uid="uid://dgwt11gjnhass" path="res://Sprites/Map Objects/wpncrate.png" id="39_acujk"]
+[ext_resource type="Texture2D" uid="uid://bx5u3lm7eyk8b" path="res://Sprites/Map Objects/flower1.png" id="27_f1ofj"]
+[ext_resource type="Texture2D" uid="uid://rjm2ft42ad87" path="res://Sprites/Map Objects/flower2.png" id="28_r6hbr"]
+[ext_resource type="Texture2D" uid="uid://cb2g77srgk1xt" path="res://Sprites/Map Objects/flower3.png" id="29_t6tf2"]
+[ext_resource type="Texture2D" uid="uid://c2pktqmammbwc" path="res://Sprites/Map Objects/hand.png" id="30_8fyof"]
+[ext_resource type="Texture2D" uid="uid://bu3lnofr6r734" path="res://Sprites/Map Objects/head.png" id="31_v5rya"]
+[ext_resource type="Texture2D" uid="uid://dxaf1xy1gkt5" path="res://Sprites/Map Objects/legs.png" id="32_vsmen"]
+[ext_resource type="Texture2D" uid="uid://cd8xjyxvs1dg8" path="res://Sprites/Map Objects/locker.png" id="33_fbjev"]
+[ext_resource type="PackedScene" uid="uid://n4h201l8kglq" path="res://scene/Pickable_Guns/pickable_minigun.tscn" id="33_noqnl"]
+[ext_resource type="PackedScene" uid="uid://bkm3dtvk1uueo" path="res://scene/Pickable_Guns/pickable_uzi_akimbo.tscn" id="34_8di36"]
+[ext_resource type="Texture2D" uid="uid://ntc25c6nqw1c" path="res://Sprites/Map Objects/sofa1.png" id="34_g8ni4"]
+[ext_resource type="Texture2D" uid="uid://cf4q0foyktqw7" path="res://Sprites/Map Objects/sofa2.png" id="35_3pd5m"]
+[ext_resource type="Texture2D" uid="uid://ckk7itcgpascj" path="res://Sprites/Map Objects/table.png" id="36_kkx2q"]
+[ext_resource type="Texture2D" uid="uid://dmfw2h8cg17oa" path="res://Sprites/Map Objects/vendingmachine.png" id="37_e400i"]
+[ext_resource type="Texture2D" uid="uid://dq84n7cym1h7o" path="res://Sprites/Map Objects/vendingmachinebroken.png" id="38_fnqxh"]
+[ext_resource type="Texture2D" uid="uid://dwv3quwc0445f" path="res://Sprites/Map Objects/wpncrate.png" id="39_acujk"]
 
 [sub_resource type="Environment" id="Environment_t0p8o"]
 background_mode = 2
@@ -205,28 +200,28 @@ position = Vector2(-1131, -5976)
 [node name="Death_Possesed5" parent="." instance=ExtResource("12_mkxq2")]
 position = Vector2(-1031, -7284)
 
-[node name="Pickable_Rifle" parent="." instance=ExtResource("17_fk5ap")]
+[node name="Pickable_Rifle" parent="." instance=ExtResource("25_62t6b")]
 position = Vector2(-4081, -7758)
 
-[node name="Pickable_Sniper" parent="." instance=ExtResource("18_ai2gf")]
+[node name="Pickable_Sniper" parent="." instance=ExtResource("6_tm2hb")]
 position = Vector2(-5009, -7637)
 
-[node name="Pickable_AA" parent="." instance=ExtResource("19_a8w46")]
+[node name="Pickable_AA" parent="." instance=ExtResource("26_20r5k")]
 position = Vector2(-4989, -6015)
 
-[node name="Pickable_AA2" parent="." instance=ExtResource("19_a8w46")]
+[node name="Pickable_AA2" parent="." instance=ExtResource("26_20r5k")]
 position = Vector2(1079, -6399)
 
-[node name="Pickable_DMR" parent="." instance=ExtResource("20_h6ucy")]
+[node name="Pickable_DMR" parent="." instance=ExtResource("5_5jbah")]
 position = Vector2(-3980, -7374)
 
-[node name="Pickable_Minigun" parent="." instance=ExtResource("21_2ib2q")]
+[node name="Pickable_Minigun" parent="." instance=ExtResource("7_fqej7")]
 position = Vector2(-4431, -6809)
 
-[node name="Pickable_RocketLauncher" parent="." instance=ExtResource("22_8j5x1")]
+[node name="Pickable_RocketLauncher" parent="." instance=ExtResource("8_noh41")]
 position = Vector2(-4034, -6379)
 
-[node name="Pickable_Shotgun" parent="." instance=ExtResource("23_4mwff")]
+[node name="Pickable_Shotgun" parent="." instance=ExtResource("3_6i451")]
 position = Vector2(-3697, -6029)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -360,3 +355,18 @@ texture = ExtResource("39_acujk")
 position = Vector2(-4162, -7967)
 scale = Vector2(4, 4)
 texture = ExtResource("39_acujk")
+
+[node name="Effigy3" parent="." instance=ExtResource("13_8iayn")]
+position = Vector2(4070, -2295)
+
+[node name="Effigy4" parent="." instance=ExtResource("13_8iayn")]
+position = Vector2(4065, -4289)
+
+[node name="Effigy5" parent="." instance=ExtResource("13_8iayn")]
+position = Vector2(4493, -4285)
+
+[node name="Pickable_Minigun3" parent="." instance=ExtResource("33_noqnl")]
+position = Vector2(4193, -1683)
+
+[node name="Pickable_Uzi2" parent="." instance=ExtResource("34_8di36")]
+position = Vector2(4427, -1680)

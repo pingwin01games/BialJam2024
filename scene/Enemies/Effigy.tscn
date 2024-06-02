@@ -1,9 +1,9 @@
 [gd_scene load_steps=36 format=3 uid="uid://dbarg7blmgk66"]
 
-[ext_resource type="PackedScene" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_4q1a4"]
+[ext_resource type="PackedScene" uid="uid://c6cgk320vn85q" path="res://scene/Enemies/Shooting_Enemy_Template.tscn" id="1_4q1a4"]
 [ext_resource type="Script" path="res://script/Enemies/Effigy.gd" id="2_xef4y"]
-[ext_resource type="Texture2D" uid="uid://b1ddqqvchwe2u" path="res://Sprites/Projectiles/mzzl_flash2-Sheet.png" id="4_prlu5"]
-[ext_resource type="Texture2D" uid="uid://cu73xv402vuum" path="res://Sprites/Enemies/EffigyExplosion.png" id="5_3nbc8"]
+[ext_resource type="Texture2D" uid="uid://dmh5kkuoxp4i5" path="res://Sprites/Projectiles/mzzl_flash2-Sheet.png" id="4_prlu5"]
+[ext_resource type="Texture2D" uid="uid://dg5r36gnnjun4" path="res://Sprites/Enemies/EffigyExplosion.png" id="5_3nbc8"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w1xb1"]
 load_path = "res://.godot/imported/effigy.png-f68e5bf5366010fd5ef2fe4b2af60a0e.ctex"
